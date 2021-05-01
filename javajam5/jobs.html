@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaJam House Jobs</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="javajam.css">
+    <meta name="viewport" content="width=device-width, initialscale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body class="body">
+    <div class="container">
+        <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <!-- Include every Bootstrap JavaScript plugin -->
+        <!-- 
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        
+        Option 2: Separate Popper and Bootstrap JS
+        Separate
+        If you decide to go with the separate scripts solution, 
+        Popper must come first (if you’re using tooltips or popovers), 
+        and then our JavaScript plugins. 
+        -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+        <header class="header">
+            <h1>JavaJam Coffee House</h1>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="picture/javajamlogo.jpg" width="60" height="60" class="rounded" class="d-inline-block align-top" alt="JavaJam"> JavaJam
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 
+            And because we use classes for our navs, 
+            you can avoid the list-based approach entirely if you like. 
+            -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="menu.html">Menu</a>
+                    <a class="nav-link" href="music.html">Music</a>
+                    <a class="nav-link" href="jobs.html">Jobs</a>
+                    <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <h2>Jobs at JavaJam</h2>
+            <p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an asterisk (*).</p>
+            <form action="http://webdevbasics.net/scripts/javajam8.php" method="post">
+
+                <label for="name">*Full name:</label><br>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="First name / Forename / Given Name " required>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Last name / Surname" required>
+                    </div>
+                </div>
+
+                <label for="email">*Email address:</label><br>
+                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required><br>
+
+                <label for="exp">*Experience:</label><br>
+                <textarea name="exp" class="form-control" id="exp" rows="3" placeholder="Please list out your work experiences."></textarea><br>
+
+                <p>
+                    <div class="form-group">
+                        <label for="select-choice">Select job position:</label>
+                        <select class="form-control" name="job" id="job">
+                            <script>
+                            //Write codes for 3(a), 3(b), 3(c), 3(d)
+                             var jobclass = [{
+                                code:"ba",
+                                name:"Barista",
+                                scope:"Preparing and serving hot and cold drinks such as coffee, tea, artisan and speciality beverages."},
+                                {code:"tr",
+                                name:"Trainee",
+                                scope:"Supporting daily operations of the cafe."},
+                                {code:"ct",
+                                name:"Coffee Taster",
+                                scope:"Tastes samples of coffee to determine palatability of different coffee in terms of grade, approximate market value, or acceptability to consumer tastes."},
+                                {code:"ma",
+                                name:"Manager",
+                                scope:"Managing day-to-day operations of the cafe."},
+                                {code:"csm",
+                                name:"Coffee Store Manager",
+                                scope:"Complete store administration and ensure compliance with policies and procedures, expand store traffic and optimize profitability."},
+                                {code:"asm",
+                                name:"Assistant Store Manager",
+                                scope:"Maintain outstanding store condition and visual merchandising standards, additional store manager duties as needed."},
+                                {code:"am",
+                                name:"Administrative Manager",
+                                scope:"Meet sales goals by training, motivating, mentoring and providing feedback to sales staff, propose innovative ideas to increase market share."}
+                                ];
+                                for (var i = 0; i < jobclass.length; i++) {
+                                    document.write("<option value=" + jobclass[i].code + ">" + jobclass[i].name + "</option>");
+                                }
+                            </script>
+                        </select>
+                        <p id="jobScope"> Preparing and serving hot and cold drinks such as
+                            coffee, tea, artisan and speciality beverages.</p> 
+                        <script>
+                            var opt = document.querySelector("select");
+                            var paragraph = document.querySelector("#jobScope");
+                            opt.addEventListener("change", changeText);
+                            function changeText() {
+                                var value = opt.value;
+                                for (var i = 0; i < jobclass.length; i++) {
+                                    if ( value == jobclass[i].code){
+                                        paragraph.textContent = jobclass[i].scope;
+                                    }
+                                }        
+                            }   
+                        </script>
+                    </div>
+                </p>
+
+                <p>
+                    <label for="date&time">Preferred Interview Data and Time:</label>
+                    <input type="datetime-local" id="date&time" name="date&time">
+                </p>
+
+                <p>
+                    <div class="custom-file mb-3">
+                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="file">Please upload your photo. </label>
+                    </div>
+                </p>
+                <button class="btn btn-light" type="submit">Apply</button>
+            </form>
+        </main>
+        <footer class="container text-center font-italic">
+            <div>Copyright &copy 2021 JavaJam Coffee House
+                <div>
+                    <a href="mailto:ahaoahao2000@gmail.com">ahaoahao2000@gmail.com</a>
+        </footer>
+        </div>
+</body>
+
+
+</html>
