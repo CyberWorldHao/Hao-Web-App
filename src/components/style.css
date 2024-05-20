@@ -1,18 +1,59 @@
 .container {
-  padding: 5%;
-}
-
-.setleft {
-  text-align: left;
-}
-
-.enter {
-  width: 100%;
-}
-body {
-  background-image: linear-gradient(
-    rgb(255, 0, 221),
+  color: rgb(33, 37, 41);
+  font-weight: bold;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  overflow: auto;
+  background: radial-gradient(
+    farthest-corner circle at 80% top,
     rgb(0, 255, 242),
-    rgb(255, 148, 16)
+    rgb(255, 0, 221)
   );
+
+  .contentFrame {
+    margin: 1.8% 7%;
+  }
+}
+
+.hr {
+  border: 1px solid;
+  border-color: black;
+  margin: 5px 0px;
+}
+
+.noPhoneContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .credit {
+    font-size: xx-small;
+    font-style: italic;
+    font-weight: lighter;
+    position: relative;
+    bottom: 40px;
+  }
+
+  .emptyCaption {
+    font-size: x-large;
+  }
+
+  .img {
+    max-width: 380px;
+    max-height: 380px;
+    background: radial-gradient(rgba(255, 255, 255), rgba(255, 255, 255, 0.9));
+    border-radius: 20%;
+    box-shadow: rgba(255, 255, 255, 0.9) 0px 0px 20px 10px;
+  }
+}
+
+.header2 {
+  text-align: left;
+  padding: 5% 15%;
+}
+
+.table {
+  padding: 5% 15%;
+  font-weight: 100;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { phonebookData, updateData } from "./phoneBookData.js";
+import { phonebookData, updateData } from "./phoneBookData.jsx";
 import Button from "react-bootstrap/Button";
 import "./style.css";
 
