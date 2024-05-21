@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { phonebookData, updateData } from "./phoneBookData.jsx";
+import React from "react";
+import { phonebookData } from "./phoneBookData.jsx";
 import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
 import RenderForm from "./addContact";
 import "./style.css";
@@ -14,7 +13,7 @@ function PhoneNumList() {
 
   return phonebookData.map((data, index) => {
     return (
-      <tr>
+      <tr key={index}>
         <td>
           <b>{index + 1}</b>
         </td>
@@ -29,20 +28,11 @@ function PhoneNumList() {
   });
 }
 
-function AddContact(name, num) {
-  var newContact = {};
-  newContact.name = name;
-  newContact.phoneNum = num;
-  phonebookData.push(newContact);
-  updateData(phonebookData);
-}
-
 function OutputPhoneNumList() {
-  const [modalShow, setModalShow] = useState(false);
   return (
     <div className="container">
       <div className="contentFrame">
-        <h1 className="mb-0">Phone Book</h1>
+        <h1>Phone Book</h1>
         <hr className="hr" />
         <Carousel data-bs-theme="dark" interval={null}>
           {phonebookData.length ? (
@@ -66,7 +56,11 @@ function OutputPhoneNumList() {
                 <img src={EmptyFolder} alt="File Not Found" className="img" />
                 <p className="credit">
                   {"Designed by "}
-                  <a href="http://www.freepik.com" target="_blank">
+                  <a
+                    href="http://www.freepik.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Freepik
                   </a>
                 </p>
@@ -78,8 +72,24 @@ function OutputPhoneNumList() {
             </Carousel.Item>
           )}
           <Carousel.Item>
-            <h2 className="header2 pl-5">Add New Contact</h2>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <h2 className="header2 pl-5">Add New Contact</h2>
+              <ion-icon
+                name="call-outline"
+                style={{
+                  fontSize: "40px",
+                  color: "rgb(33, 37, 41)",
+                  margin: "5% 0px 0px 1%",
+                }}
+              />
+            </div>
             {RenderForm()}
+            <Carousel.Caption>
+              <p>
+                Let's save new phone number into your browser's local storage ~
+              </p>
+              <p>You can delete from your local storage anytime ~</p>
+            </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </div>

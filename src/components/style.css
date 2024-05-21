@@ -50,7 +50,19 @@
 
 .header2 {
   text-align: left;
-  padding: 5% 15%;
+  padding: 5% 0% 2% 15%;
+}
+.formContainer {
+  margin: 0% 0% 15% 15%;
+
+  .formContent {
+    text-align: left;
+  }
+}
+p {
+  color: rgb(33, 37, 41);
+
+  font-weight: 400;
 }
 
 .table {

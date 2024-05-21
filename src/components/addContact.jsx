@@ -4,8 +4,7 @@ import Button from "react-bootstrap/Button";
 import "./style.css";
 
 function AddContact(name, num) {
-  var index = phonebookData.length;
-  var newContact = {};
+  let newContact = {};
   newContact.name = name;
   newContact.phoneNum = num;
   phonebookData.push(newContact);
@@ -16,11 +15,10 @@ function RenderForm() {
   const [name, setName] = useState("");
   const [num, setNum] = useState("");
   return (
-    <div className="p-5">
+    <div className="formContainer">
       <form>
-        <h4 className="setleft">Name</h4>
+        <h4 className="formContent">Name</h4>
         <input
-          className="enter"
           placeholder="Enter the contact name"
           id="name"
           name="name"
@@ -29,9 +27,8 @@ function RenderForm() {
         />
         <br />
         <br />
-        <h4 className="setleft">Phone Number</h4>
+        <h4 className="formContent">Phone Number</h4>
         <input
-          className="enter"
           placeholder="Enter the phone number"
           id="num"
           name="phoneNum"
@@ -41,7 +38,7 @@ function RenderForm() {
         <br />
         <br />
         <Button
-          variant="primary"
+          variant="dark"
           id="adding"
           type="submit"
           onClick={() => AddContact(name, num)}
