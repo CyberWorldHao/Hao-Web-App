@@ -85,13 +85,23 @@ function OutputPhoneNumList() {
             </div>
             {RenderForm()}
             <Carousel.Caption>
-              <p>
-                Let's save new phone number into your browser's local storage ~
-              </p>
-              <p>You can delete from your local storage anytime ~</p>
+              <div className="phoneView">
+                <p>
+                  Let's save new phone number into your browser's local storage
+                  ~
+                  <br />
+                  You can delete from your local storage anytime ~
+                </p>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        <div className="PCView">
+          <p>
+            Let's save new phone number into your browser's local storage ~
+            <p>You can delete from your local storage anytime ~</p>
+          </p>
+        </div>
       </div>
     </div>
   );
