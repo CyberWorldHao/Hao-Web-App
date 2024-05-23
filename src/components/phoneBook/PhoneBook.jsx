@@ -1,17 +1,17 @@
-import React from "react";
-import { phonebookData } from "./phoneBookData.jsx";
-import Table from "react-bootstrap/Table";
+import "./phoneBookStyle.css";
+import { phoneBookData } from "./PhoneBookData.jsx";
 import Carousel from "react-bootstrap/Carousel";
-import RenderForm from "./addContact";
-import "./style.css";
-import EmptyFolder from "../images/emptyFolder.png";
+import EmptyFolder from "../../images/emptyFolder.png";
+import React from "react";
+import RenderForm from "./AddContact.jsx";
+import Table from "react-bootstrap/Table";
 
 function PhoneNumList() {
-  if (phonebookData.length === 0) {
+  if (phoneBookData.length === 0) {
     return <></>;
   }
 
-  return phonebookData.map((data, index) => {
+  return phoneBookData.map((data, index) => {
     return (
       <tr key={index}>
         <td>
@@ -28,14 +28,14 @@ function PhoneNumList() {
   });
 }
 
-function OutputPhoneNumList() {
+function PhoneBook() {
   return (
-    <div className="container">
-      <div className="contentFrame">
+    <div className="phoneBookcontainer">
+      <div className="phoneBookContentFrame">
         <h1>Phone Book</h1>
         <hr className="hr" />
         <Carousel data-bs-theme="dark" interval={null}>
-          {phonebookData.length ? (
+          {phoneBookData.length ? (
             <Carousel.Item>
               <div className="table">
                 <Table striped bordered hover variant="dark" size="lg">
@@ -53,7 +53,7 @@ function OutputPhoneNumList() {
           ) : (
             <Carousel.Item className="pl-5 py-5">
               <div className="noPhoneContainer">
-                <img src={EmptyFolder} alt="File Not Found" className="img" />
+                <img src={EmptyFolder} alt="File Not Found" className="emptyPhoneListImg" />
                 <p className="credit">
                   {"Designed by "}
                   <a
@@ -107,4 +107,4 @@ function OutputPhoneNumList() {
   );
 }
 
-export default OutputPhoneNumList;
+export default PhoneBook;

@@ -1,4 +1,4 @@
-.container {
+.phoneBookcontainer {
   color: rgb(33, 37, 41);
   font-weight: bold;
   height: 100vh !important;
@@ -10,13 +10,13 @@
     rgb(255, 0, 221)
   );
 
-  .contentFrame {
+  .phoneBookContentFrame {
     margin: 1.8% 7%;
   }
 }
 
 .hr {
-  border: 1px solid;
+  border: 2px solid;
   border-color: black;
   margin: 5px 0px;
 }
@@ -39,7 +39,7 @@
     font-size: x-large;
   }
 
-  .img {
+  .emptyPhoneListImg {
     max-width: 380px;
     max-height: 380px;
     background: radial-gradient(rgba(255, 255, 255), rgba(255, 255, 255, 0.9));

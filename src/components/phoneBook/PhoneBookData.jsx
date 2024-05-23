@@ -1,4 +1,4 @@
-let phonebookData = [
+let phoneBookData = [
   {
     name: "Jason",
     phoneNum: "010-1234567",
@@ -41,13 +41,13 @@ let phonebookData = [
   },
 ];
 
-if (localStorage.getItem("phonebookData")) {
-  phonebookData = JSON.parse(localStorage.getItem("phonebookData"));
+if (localStorage.getItem("phoneBookData")) {
+  phoneBookData = JSON.parse(localStorage.getItem("phoneBookData"));
 }
 
 //Update the current changes(CREATE, DELETE, EDIT) to the localStorage
 function updateData(newData) {
-  localStorage.setItem("phonebookData", JSON.stringify(newData));
+  localStorage.setItem("phoneBookData", JSON.stringify(newData));
 }
 
-export { phonebookData, updateData };
+export { phoneBookData, updateData };

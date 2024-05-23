@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { phonebookData, updateData } from "./phoneBookData.jsx";
+import "./phoneBookStyle.css";
+import { phoneBookData, updateData } from "./PhoneBookData.jsx";
 import Button from "react-bootstrap/Button";
-import "./style.css";
+import React, { useState } from "react";
 
 function AddContact(name, num) {
   let newContact = {};
   newContact.name = name;
   newContact.phoneNum = num;
-  phonebookData.push(newContact);
-  updateData(phonebookData);
+  phoneBookData.push(newContact);
+  updateData(phoneBookData);
 }
 
 function RenderForm() {
