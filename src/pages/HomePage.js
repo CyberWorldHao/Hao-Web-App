@@ -1,7 +1,7 @@
 import "./homePage.css";
+import DolphinToTheLight from "../images/dolphinToTheLight.jpg";
 import GhibliStudio from "../images/ghibliStudio.jpg";
 import L4D from "../images/l4D.jpeg";
-import DolphinToTheLight from "../images/dolphinToTheLight.jpg";
 import Love from "../images/love.jpg";
 import Navs from "../components/Navs";
 import React from "react";
@@ -24,54 +24,17 @@ function HomePage() {
         />
         <h1
           className="my-auto pb-2"
-          style={{ alignItems: "center", justifyContent: "center" ,color:"#231814"}}
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#555357",
+          }}
         >
           Welcome to Pinky Dolphin To The Light
         </h1>
       </header>
-      {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="index.html">
-          {" "}
-          JavaJam
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="index.html">
-                Home <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="menu.html">
-                Menu
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="music.html">
-                Music
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="jobs.html">
-                Jobs
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav> */}
       <Navs />
-      <div>
+      <div className="homePageContentContainer">
         <img
           src={WindingRoad}
           alt="winding road through the woods"
@@ -92,9 +55,7 @@ function HomePage() {
           <li>Music and Poetry Readings</li>
           <li>Open Mic Night</li>
         </ul>
-        <p>
-          <div>54321 Route 42 Ellison Bay, WI 54210 1-888-555-5555</div>
-        </p>
+        <p>54321 Route 42 Ellison Bay, WI 54210 1-888-555-5555</p>
         <br />
         <div className="row text-center">
           <div className="col-lg-4">

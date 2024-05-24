@@ -5,6 +5,7 @@ import EmptyFolder from "../../images/emptyFolder.png";
 import React from "react";
 import RenderForm from "./AddContact.jsx";
 import Table from "react-bootstrap/Table";
+import Navs from "../Navs.jsx";
 
 function PhoneNumList() {
   if (phoneBookData.length === 0) {
@@ -32,6 +33,7 @@ function PhoneBook() {
   return (
     <div className="phoneBookcontainer">
       <div className="phoneBookContentFrame">
+        <Navs />
         <h1>Phone Book</h1>
         <hr className="hr" />
         <Carousel data-bs-theme="dark" interval={null}>
@@ -53,7 +55,11 @@ function PhoneBook() {
           ) : (
             <Carousel.Item className="pl-5 py-5">
               <div className="noPhoneContainer">
-                <img src={EmptyFolder} alt="File Not Found" className="emptyPhoneListImg" />
+                <img
+                  src={EmptyFolder}
+                  alt="File Not Found"
+                  className="emptyPhoneListImg"
+                />
                 <p className="credit">
                   {"Designed by "}
                   <a
@@ -99,7 +105,8 @@ function PhoneBook() {
         <div className="PCView">
           <p>
             Let's save new phone number into your browser's local storage ~
-            <p>You can delete from your local storage anytime ~</p>
+            <br />
+            You can delete from your local storage anytime ~
           </p>
         </div>
       </div>

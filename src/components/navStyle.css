@@ -1,15 +1,29 @@
 .navs {
-  background-color: #f8f9fa !important;
+  margin: 10px;
+  background-color: #ffffe6 !important;
+  border-radius: 20px !important;
+  font-size: large;
 }
 
 .navItem {
+  display: flex;
+}
+
+.navDisableItem {
+  opacity: 30%;
+  display: flex;
 }
 
 .navLinkButton {
-  color: #806058 !important;
-  font-family: Verdana, Arial, sans-serif;
+  color: #fa647d !important;
+  align-self: center;
 }
 
-.disable {
-  color: #575a5e !important;
+.disableNavLinkButton {
+  color: #fa647d !important;
+  margin-bottom: -20px;
+}
+.activeBar {
+  background-image: radial-gradient(#f7b8b6, #ffffe6) !important;
+  border-radius: 10px !important;
 }
