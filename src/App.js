@@ -1,11 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import AboutMePage from "./pages/AboutMePage";
 import PhoneBook from "./components/phoneBook/PhoneBook";
 import React from "react";
 
 const router = createBrowserRouter([
-  
   {
     path: "/",
     element: <HomePage />,
@@ -26,6 +26,11 @@ const router = createBrowserRouter([
   {
     path: "/phonebook",
     element: <PhoneBook />,
+    // loader: teamLoader,
+  },
+  {
+    path: "/aboutme",
+    element: <AboutMePage />,
     // loader: teamLoader,
   },
 ]);
