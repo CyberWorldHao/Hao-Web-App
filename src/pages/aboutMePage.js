@@ -1,3 +1,4 @@
+import "./aboutMePage.css";
 import React from "react";
 
 var TxtType = function (el, toRotate, period) {
