@@ -4,10 +4,11 @@
   overflow: auto;
   color: #555357;
   background-color: #f7b8b6;
+  overflow-x: hidden;
 }
 
 .homePageContentContainer {
-  padding: 0px 50px 0px 50px
+  padding: 0px 50px 0px 50px;
 }
 
 .body {
@@ -53,4 +54,185 @@
 .details {
   padding-left: 20%;
   padding-right: 20%;
+}
+
+.btn {
+  position: relative;
+}
+
+.forImgDisplay {
+  position: relative;
+}
+
+.loveImg .loveBubble {
+  display: none;
+  position: absolute;
+  animation: loveFadeIn 1s;
+  top: -200%;
+  left: 85%;
+}
+
+.loveImg:hover img {
+  display: block;
+  opacity: 0.5;
+}
+
+.l4d2Img .bloodyHand {
+  display: none;
+  position: absolute;
+  animation: fadeIn 1s;
+  top: 0;
+  left: 20%;
+}
+
+.bloodDrop {
+  display: block;
+  position: absolute;
+  animation: fadeInOut 3s infinite alternate;
+  top: 0;
+  left: 80%;
+}
+
+.bloodSplatter {
+  display: block;
+  position: absolute;
+  animation: fadeInOut 2s infinite alternate;
+  top: 0;
+  left: 25%;
+}
+
+.l4d2Img:hover img {
+  display: block;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loveFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.flowersContainer {
+  position: relative;
+}
+
+.ocean {
+  pointer-events: none; /* Make the wave element click-through */
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg)
+    repeat-x;
+  width: 6400px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 188px;
+  transform: translate(0, 0, 0);
+  animation: wave 7s ease infinite;
+  opacity: 0.7;
+  overflow-y: hidden;
+}
+
+.wave:nth-of-type(2) {
+  animation: swell 4s ease infinite;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 50px);
+  }
+}
+
+.btn-success {
+  background-color: #10a7c1 !important;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes drop {
+  0% {
+    bottom: 0px;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: -200px;
+  }
+}
+
+.drops {
+  position: relative;
+  animation: fade-in 0.1s linear 0.4s forwards;
+}
+
+.drop {
+  width: 5px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #10a7c1;
+  animation: drop 1.3s cubic-bezier(1, 0.19, 0.66, 0.12) 0.5s infinite;
+}
+
+.drop1 {
+  left: 100%;
+  animation-delay: 0.5s;
+}
+
+.drop2 {
+  left: -10%;
+  animation-delay: 0.7s;
+}
+
+.drop3 {
+  right: 100%;
+  animation-delay: 0.9s;
 }

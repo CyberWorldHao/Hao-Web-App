@@ -1,12 +1,17 @@
 import "./homePage.css";
+import amazonRiverPinkDolphin from "../images/amazonRiverPinkDolphin.png";
+import BloodDrop from "../images/bloodDrop.png";
+import BloodSplatter from "../images/bloodSplatter.png";
+import BloodyHand from "../images/bloodyHand.png";
 import DolphinToTheLight from "../images/dolphinToTheLight.jpg";
+import Flowers from "../components/Flowers";
 import GhibliStudio from "../images/ghibliStudio.jpg";
-import L4D from "../images/l4D.jpeg";
+import L4D2 from "../images/l4D2.png";
 import Love from "../images/love.jpg";
+import LoveBubble from "../images/loveBubble.png";
 import Navs from "../components/Navs";
+import PolarBear from "../images/polarBear.jpg";
 import React from "react";
-import WarmHome from "../images/warmHome.jpg";
-import WindingRoad from "../images/windingRoad.jpg";
 
 function HomePage() {
   return (
@@ -20,7 +25,7 @@ function HomePage() {
           width="90"
           height="60"
           className="rounded my-auto mx-2"
-          alt="Does anyone want a coffee?"
+          alt="pink dolphin"
         />
         <h1
           className="my-auto pb-2"
@@ -36,46 +41,95 @@ function HomePage() {
       <Navs />
       <div className="homePageContentContainer">
         <img
-          src={WindingRoad}
-          alt="winding road through the woods"
+          src={amazonRiverPinkDolphin}
+          // alt="winding road through the woods"
+          alt="amazon river pink dolphin"
           align="right"
           width="400"
           height="300"
+          style={{ borderRadius: "10px" }}
         />
-        <h2>Follow the Winding Road to JavaJam</h2>
+        <h2>Follow the Pink Dolphin to Amazon River</h2>
         <p>
-          We're a little out of the way, but take a drive down Route 42 to
-          JavaJam today! Indulge in our locally roasted free-trade coffee and
-          home-made pastries. You'll feel right at home at JavaJam!
+          The Amazon River pink dolphin is a symbol of the rich biodiversity of
+          the Amazon basin and plays a crucial role in the health of its
+          freshwater ecosystems. Conservation efforts are vital to ensure the
+          survival of this unique species for future generations.
         </p>
-        <h3>JavaJam Coffee House features: </h3>
+        <h3>Conservation Status: </h3>
         <ul>
-          <li>Specialty Coffee and Tea</li>
-          <li>Bagels, Muffins, and Organic Snacks</li>
-          <li>Music and Poetry Readings</li>
-          <li>Open Mic Night</li>
+          <li>
+            <b>Threats:</b> The pink dolphin faces several threats, including
+            habitat destruction due to deforestation and dam construction,
+            pollution, and accidental entanglement in fishing gear. In some
+            regions, they are also hunted for use as bait in catfish fisheries.
+          </li>
+          <li>
+            <b>Conservation Efforts:</b> Various conservation efforts are in
+            place to protect this species, including habitat protection,
+            pollution control, and legal protection measures. Organizations are
+            also working to raise awareness about the importance of conserving
+            these unique animals.
+          </li>
         </ul>
-        <p>54321 Route 42 Ellison Bay, WI 54210 1-888-555-5555</p>
+        <h3>Physical Characteristics: </h3>
+        <ul>
+          <li>
+            <b>Color:</b> Young pink dolphins are typically gray, but they
+            become pinker as they age. Their color can vary from a light pink to
+            a deep pink, and it can change depending on their mood, water
+            temperature, and health. The pink coloration is due to capillary
+            placement near the skin surface.
+          </li>
+          <li>
+            <b>Size:</b> Adult pink dolphins can reach lengths of up to{" "}
+            <b>2.5 meters (8.2 feet) </b>and weigh between{" "}
+            <b>85 and 160 kilograms (187 to 353 pounds)</b>.
+          </li>
+          <li>
+            <b>Body Structure:</b> They have a robust body with a large, rounded
+            forehead, long beak, and flexible neck, which allows them to
+            maneuver easily through the complex network of flooded forests,
+            rivers, and lakes.
+          </li>
+        </ul>
+        <br />
+        <p
+          style={{
+            fontStyle: "italic",
+            marginLeft: "0",
+            textIndent: "-20px",
+            paddingLeft: "20px",
+          }}
+        >
+          Simandan, V. (2023, August 2). 25 Interesting Facts About the Pink
+          Dolphin, aka the Amazon River Dolphin. <br />
+          V.M. Simandan.
+          <a
+            href="https://www.simandan.com/amazon-river-pink-dolphin/"
+            target="_blank"
+            style={{ color: "blue", textDecoration: "underline" }}
+            rel="noreferrer"
+          >
+            https://www.simandan.com/amazon-river-pink-dolphin/
+          </a>
+        </p>
         <br />
         <div className="row text-center">
           <div className="col-lg-4">
             <img
-              src={WarmHome}
-              className="bd-placeholder-img rounded-circle"
-              width="200"
-              height="200"
-              alt="warm-home"
+              src={PolarBear}
+              className="bd-placeholder-img rounded"
+              width="300"
+              height="250"
+              alt="polar bear on melting ice"
             />
             <br />
             <br />
-            <h2>Home Sweet Home</h2>
+            <h2>Stop Global Warming Fight Climate Change</h2>
             <p>
-              A house is made of walls and beams, a home is built with love and
-              dreams
-            </p>
-            <p>
-              Our home is dying, our mother earth need protector like you to
-              stand out for her
+              Our home is dying; our Mother Earth needs protectors like you to
+              stand up for her.
             </p>
             <p>
               <a
@@ -84,86 +138,159 @@ function HomePage() {
                 href="https://www.greenamerica.org/your-green-life/10-ways-you-can-fight-climate-change"
               >
                 Save The Days
+                <div class="drops">
+                  <div class="drop drop1"></div>
+                  <div class="drop drop2"></div>
+                  <div class="drop drop3"></div>
+                </div>
               </a>
             </p>
           </div>
           <div className="col-lg-4">
             <img
               src={Love}
-              className="bd-placeholder-img rounded-circle"
-              width="200"
-              height="200"
-              alt="warm-home"
+              className="bd-placeholder-img rounded"
+              width="300"
+              height="250"
+              alt="lovely book"
             />
             <br />
             <br />
-            <h2>Life is the flower for which love is the honey</h2>
+            <h2>
+              STOP Saying <br />
+              "I Love You"
+            </h2>
             <p>
-              Check out our Coffee Lover queto in page menu! Click the button
-              below to know how to maintain relationship with real life example
+              Please respect the word 'Love' and say it only to those you truly
+              mean it to.
             </p>
-            <p>
+            <p className="loveImg">
               <a
                 className="btn btn-danger"
                 style={{ backgroundcolor: "#5B1E61" }}
                 target="-_blank"
                 href="https://www.youtube.com/watch?v=cr-ZCI_ZaFg"
               >
-                Enjoy the journey of learning
+                <img
+                  src={LoveBubble}
+                  width="50"
+                  height="80"
+                  alt="love bubble"
+                  className="loveBubble"
+                />
+                Prince EA Video
               </a>
             </p>
           </div>
           <div className="col-lg-4">
             <img
-              src={L4D}
-              className="bd-placeholder-img rounded-circle"
-              width="200"
-              height="200"
-              alt="warm-home"
+              src={L4D2}
+              className="bd-placeholder-img rounded"
+              width="300"
+              height="250"
+              alt="Left 4 Dead 1 & 2 main character poster"
             />
             <br />
             <br />
-            <h2>Hiding Easter Egg</h2>
-            <p>
-              Go to the Music Page to find out the easter egg we prepared for
-              you Gamer!
+            <h2 className="l4d2Img forImgDisplay">
+              <img
+                src={BloodSplatter}
+                width="50"
+                height="80"
+                alt="bloody splatter"
+                className="bloodSplatter"
+              />
+              Are U a Left 4 Dead Lover!
+            </h2>
+            <p className="l4d2Img forImgDisplay">
+              If the answer is yes, let me take you to the music video by the
+              Midnight Riders Band.
+              <img
+                src={BloodDrop}
+                width="50"
+                height="80"
+                alt="blood drop"
+                className="bloodDrop"
+              />
             </p>
-            <p>
+            <p className="l4d2Img">
               <a
                 className="btn btn-danger"
-                style={{ backgroundcolor: "#c72202" }}
+                style={{ color: "#c3253f", backgroundColor: "white" }}
                 target="-_blank"
                 href="https://www.youtube.com/watch?v=iyH_NxJ86vs"
               >
-                Click Me to Enjoy The Easter Egg
+                Let's Roll
+                <img
+                  src={BloodyHand}
+                  width="50"
+                  height="80"
+                  alt="bloody hand"
+                  className="bloodyHand"
+                />
               </a>
             </p>
           </div>
         </div>
         <br />
-        <div className="text-center">
+        <div className="text-center flowersContainer">
+          <Flowers
+            flowerPositionRight="80%"
+            flowerPositionTop="50%"
+            flowerType="flowerRotate"
+          />
+          <Flowers
+            flowerPositionRight="90%"
+            flowerPositionTop="5%"
+            flowerType="flowerBlink"
+          />
           <img
             src={GhibliStudio}
             style={{ borderRadius: "25px" }}
             className="bd-placeholder-img"
-            width="300"
-            height="400"
-            alt="ghiblistudio"
+            width="350"
+            height="380"
+            alt="ghibli studio"
+          />
+          <Flowers
+            flowerPositionRight="160px"
+            flowerPositionTop="70px"
+            flowerType="flowerRotate"
+          />
+          <Flowers
+            flowerPositionRight="66%"
+            flowerPositionTop="30%"
+            flowerType="flowerBlink"
           />
           <br />
+          <Flowers
+            flowerPositionRight="40px"
+            flowerPositionTop="50%"
+            flowerType="flowerRotate"
+          />
+          <Flowers
+            flowerPositionRight="20%"
+            flowerPositionTop="34%"
+            flowerType="flowerBlink"
+          />
           <br />
-          <h2>吉卜力工作室 (Studio Ghibli)</h2>
+          <h2 style={{ textAlign: "center" }}>
+            {"吉卜力工作室 Studio Ghibli"}
+          </h2>
           <p>
-            There are more content to be updated for JavaJam 6, i hope i can see
-            you there
+            I love Studio Ghibli, and here is one of my favorite songs from
+            'Spirited Away'.
           </p>
           <p>
             <a
-              className="btn btn-outline-info"
+              className="btn btn-info"
               target="-_blank"
               href="https://www.youtube.com/watch?v=qXXbTwL79R0"
             >
-              Here is the present for you
+              Always with Me
+              <br />
+              Itsumo Nando Demo
+              <br /> いつも何度でも
             </a>
           </p>
         </div>
@@ -171,9 +298,13 @@ function HomePage() {
       </div>
       <div className="text-center font-italic">
         <p>
-          Copyright &copy; 2021 JavaJam Coffee House <br />
+          Copyright &copy; 2024 Hao's Web App <br />
           <a href="mailto:ahaoahao2000@gmail.com">ahaoahao2000@gmail.com</a>
         </p>
+      </div>
+      <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave wave2"></div>
       </div>
     </div>
   );

@@ -1,0 +1,59 @@
+@keyframes flower {
+  0%,
+  10% {
+    transform: rotate(120deg);
+  }
+  45%,
+  55% {
+    transform: rotate(90deg);
+  }
+  90%,
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0.75;
+  }
+}
+
+.flowers {
+  position: absolute;
+}
+
+.flowerRotate {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  padding: 20px 10px;
+  transform: rotate(120deg);
+  border-top-left-radius: 99px;
+  border-bottom-right-radius: 99px;
+  box-shadow: #c8eaf4 0 0 10px;
+  animation: flower 3s ease-in-out infinite alternate;
+}
+
+.flowerBlink {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  padding: 20px 10px;
+  transform: rotate(120deg);
+  border-top-left-radius: 99px;
+  border-bottom-right-radius: 99px;
+  box-shadow: #fa647d 0 0 10px;
+  animation: fadeInOut 2s ease-in-out infinite alternate;
+  transform: rotate(60deg);
+}

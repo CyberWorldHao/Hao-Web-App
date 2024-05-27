@@ -5,15 +5,27 @@ import React from "react";
 
 function Navs() {
   const location = useLocation().pathname;
-  console.log(location);
+  console.log(location.length);
   return (
-    <Nav className="navs" fill>
+    <Nav
+      className={location.includes("/phonebook") ? "navsPhoneBook" : "navs"}
+      fill
+    >
       <Nav.Item
-        className={location.includes("/home") ||  location.includes("")? "navItem activeBar" : "navItem"}
+        className={
+          location.includes("/home") ||
+          (location.includes("/") && location.length === 1)
+            ? "navItem activeBar"
+            : "navItem"
+        }
       >
         <Nav.Link
-          className={"navLinkButton"}
-          href="/home"
+          className={
+            location.includes("/home")
+              ? "homeNavLinkButton"
+              : "navLinkButton"
+          }
+          href={ location.includes("/home")? "" : "/home"}
           eventKey="/home"
           active={location.includes("/home") ? true : false}
         >
@@ -24,8 +36,12 @@ function Navs() {
         className={location.includes("/menu") ? "navItem activeBar" : "navItem"}
       >
         <Nav.Link
-          className="navLinkButton"
-          href="/menu"
+          className={
+            location.includes("/menu")
+              ? "menuNavLinkButton"
+              : "navLinkButton"
+          }
+          href={ location.includes("/menu")? "" : "/menu"}
           eventKey="/menu"
           active={location.includes("/menu") ? true : false}
         >
@@ -38,8 +54,12 @@ function Navs() {
         }
       >
         <Nav.Link
-          className="navLinkButton"
-          href="/music"
+         className={
+          location.includes("/music")
+            ? "musicNavLinkButton"
+            : "navLinkButton"
+        }
+          href={ location.includes("/music")? "" : "/music"}
           eventKey="/music"
           active={location.includes("/music") ? true : false}
         >
@@ -50,8 +70,12 @@ function Navs() {
         className={location.includes("/jobs") ? "navItem activeBar" : "navItem"}
       >
         <Nav.Link
-          className="navLinkButton"
-          href="/jobs"
+          className={
+            location.includes("/jobs")
+              ? "jobsNavLinkButton"
+              : "navLinkButton"
+          }
+          href={ location.includes("/jobs")? "" : "/jobs"}
           eventKey="/jobs"
           active={location.includes("/jobs") ? true : false}
         >
@@ -76,14 +100,14 @@ function Navs() {
           <p style={{ fontSize: "12px", color: "#575a5e" }}>Coming soon!</p>
         </Nav.Link>
       </Nav.Item>
-      <Nav.Item
-        className={
-          location.includes("/phonebook") ? "navItem activeBar" : "navItem"
-        }
-      >
+      <Nav.Item className={"navItem"}>
         <Nav.Link
-          className="navLinkButton"
-          href="/phonebook"
+          className={
+            location.includes("/phonebook")
+              ? "phoneBookNavLinkButton"
+              : "navLinkButton"
+          }
+          href={ location.includes("/phonebook")? "" : "/phonebook"}
           eventKey="/phonebook"
           active={location.includes("/phonebook") ? true : false}
         >
@@ -96,8 +120,12 @@ function Navs() {
         }
       >
         <Nav.Link
-          className="navLinkButton"
-          href="/aboutme"
+          className={
+            location.includes("/aboutme")
+              ? "aboutMeNavLinkButton"
+              : "navLinkButton"
+          }
+          href={ location.includes("/aboutme")? "" : "/aboutme"}
           eventKey="/aboutme"
           active={location.includes("/aboutme") ? true : false}
         >
