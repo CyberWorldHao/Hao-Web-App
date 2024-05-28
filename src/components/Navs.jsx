@@ -8,7 +8,13 @@ function Navs() {
   console.log(location.length);
   return (
     <Nav
-      className={location.includes("/phonebook") ? "navsPhoneBook" : "navs"}
+      className={
+        location.includes("/phonebook")
+          ? "navsPhoneBook"
+          : location.includes("/aboutme")
+          ? "navsAboutMe"
+          : "navs"
+      }
       fill
     >
       <Nav.Item
@@ -21,11 +27,9 @@ function Navs() {
       >
         <Nav.Link
           className={
-            location.includes("/home")
-              ? "homeNavLinkButton"
-              : "navLinkButton"
+            location.includes("/home") ? "homeNavLinkButton" : "navLinkButton"
           }
-          href={ location.includes("/home")? "" : "/home"}
+          href={location.includes("/home") ? "" : "/home"}
           eventKey="/home"
           active={location.includes("/home") ? true : false}
         >
@@ -37,11 +41,9 @@ function Navs() {
       >
         <Nav.Link
           className={
-            location.includes("/menu")
-              ? "menuNavLinkButton"
-              : "navLinkButton"
+            location.includes("/menu") ? "menuNavLinkButton" : "navLinkButton"
           }
-          href={ location.includes("/menu")? "" : "/menu"}
+          href={location.includes("/menu") ? "" : "/menu"}
           eventKey="/menu"
           active={location.includes("/menu") ? true : false}
         >
@@ -54,12 +56,10 @@ function Navs() {
         }
       >
         <Nav.Link
-         className={
-          location.includes("/music")
-            ? "musicNavLinkButton"
-            : "navLinkButton"
-        }
-          href={ location.includes("/music")? "" : "/music"}
+          className={
+            location.includes("/music") ? "musicNavLinkButton" : "navLinkButton"
+          }
+          href={location.includes("/music") ? "" : "/music"}
           eventKey="/music"
           active={location.includes("/music") ? true : false}
         >
@@ -71,11 +71,9 @@ function Navs() {
       >
         <Nav.Link
           className={
-            location.includes("/jobs")
-              ? "jobsNavLinkButton"
-              : "navLinkButton"
+            location.includes("/jobs") ? "jobsNavLinkButton" : "navLinkButton"
           }
-          href={ location.includes("/jobs")? "" : "/jobs"}
+          href={location.includes("/jobs") ? "" : "/jobs"}
           eventKey="/jobs"
           active={location.includes("/jobs") ? true : false}
         >
@@ -97,7 +95,7 @@ function Navs() {
           active={location.includes("/tryItOnApp") ? true : false}
         >
           Try it On App
-          <p style={{ fontSize: "12px", color: "#575a5e" }}>Coming soon!</p>
+          <p className="disabledMessage">Coming soon!</p>
         </Nav.Link>
       </Nav.Item>
       <Nav.Item className={"navItem"}>
@@ -107,7 +105,7 @@ function Navs() {
               ? "phoneBookNavLinkButton"
               : "navLinkButton"
           }
-          href={ location.includes("/phonebook")? "" : "/phonebook"}
+          href={location.includes("/phonebook") ? "" : "/phonebook"}
           eventKey="/phonebook"
           active={location.includes("/phonebook") ? true : false}
         >
@@ -116,7 +114,7 @@ function Navs() {
       </Nav.Item>
       <Nav.Item
         className={
-          location.includes("/aboutme") ? "navItem activeBar" : "navItem"
+          location.includes("/aboutme") ? "navItem aboutMeActiveBar" : "navItem"
         }
       >
         <Nav.Link
@@ -125,7 +123,7 @@ function Navs() {
               ? "aboutMeNavLinkButton"
               : "navLinkButton"
           }
-          href={ location.includes("/aboutme")? "" : "/aboutme"}
+          href={location.includes("/aboutme") ? "" : "/aboutme"}
           eventKey="/aboutme"
           active={location.includes("/aboutme") ? true : false}
         >

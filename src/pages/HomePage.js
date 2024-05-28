@@ -127,7 +127,7 @@ function HomePage() {
             <br />
             <br />
             <h2>Stop Global Warming Fight Climate Change</h2>
-            <p>
+            <p style={{ textAlign: "justify" }}>
               Our home is dying; our Mother Earth needs protectors like you to
               stand up for her.
             </p>
@@ -160,7 +160,7 @@ function HomePage() {
               STOP Saying <br />
               "I Love You"
             </h2>
-            <p>
+            <p style={{ textAlign: "justify" }}>
               Please respect the word 'Love' and say it only to those you truly
               mean it to.
             </p>
@@ -202,7 +202,7 @@ function HomePage() {
               />
               Are U a Left 4 Dead Lover!
             </h2>
-            <p className="l4d2Img forImgDisplay">
+            <p className="l4d2Img forImgDisplay" style={{ textAlign: "justify" }}>
               If the answer is yes, let me take you to the music video by the
               Midnight Riders Band.
               <img

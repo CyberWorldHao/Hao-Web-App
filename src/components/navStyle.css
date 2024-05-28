@@ -11,13 +11,60 @@
   margin: 10px;
 }
 
+.navsAboutMe {
+  background-color: #806058 !important;
+  border-radius: 20px !important;
+  font-size: large;
+  margin: 10px;
+
+  .navLinkButton {
+    color: #d2b48c !important;
+    align-self: center;
+  }
+
+  .navLinkButton:hover {
+    color: #212529 !important;
+    transition: color 0.8s ease;
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .disableNavLinkButton {
+    color: #fcebb6 !important;
+    margin-bottom: -20px;
+    cursor: default;
+  }
+
+  .navDisableItem {
+    opacity: 30%;
+    display: flex;
+  }
+
+  .disabledMessage {
+    font-size: 12px;
+    color: #212529;
+  }
+
+  .aboutMeActiveBar {
+    background-image: radial-gradient(#fcebb6, #d2b48c) !important;
+    border-radius: 10px !important;
+    color: #212529 !important;
+    font-weight: bold;
+  }
+}
+
 .navItem {
   display: flex;
 }
 
 .navDisableItem {
-  opacity: 30%;
+  opacity: 40%;
   display: flex;
+}
+
+.disabledMessage {
+  font-size: 12px;
+  color: #575a5e;
 }
 
 .navLinkButton {
@@ -70,6 +117,7 @@
 }
 
 .aboutMeNavLinkButton {
+  color: #212529 !important;
   align-self: center;
   cursor: default;
 }

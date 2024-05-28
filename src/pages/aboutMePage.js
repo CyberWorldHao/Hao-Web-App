@@ -1,4 +1,5 @@
 import "./aboutMePage.css";
+import Navs from "../components/Navs";
 import React from "react";
 
 var TxtType = function (el, toRotate, period) {
@@ -75,6 +76,7 @@ function AboutMePage() {
         <div class="snowflake">❆</div>
         <div class="snowflake">❄</div>
       </div>
+      <Navs />
       <div class="snow position-relative overflow-hidden p-3 p-md-1 m-md-3 text-center">
         <div class="col-md-5 p-lg-5 mx-auto my-2">
           <h1 class="display-4 font-weight-normal">
@@ -90,25 +92,24 @@ function AboutMePage() {
               <span class="wrap"></span>
             </a>
           </h1>
-          <p class="lead font-weight-normal">
-            Want to learn more about me feel free to check out my Instagram &
-            Facebook.{" "}
+          <p class="lead">
+            Want to learn more about me feel free to check out my LinkedIn
           </p>
           <a
-            class="btn btn-primary fb"
+            class="btn linkedIn"
             href="https://www.facebook.com/cwhao1314"
             target="_blank"
             rel="noreferrer"
           >
-            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-          </a>
-          <a
-            class="btn btn-danger insta"
-            href="https://www.instagram.com/cwhao2000/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+            <ion-icon
+              name="logo-linkedin"
+              className="logoLinkedIn"
+              style={{
+                fontSize: "40px",
+                color: "#307eb0",
+                margin: "5% 0px 0px 1%",
+              }}
+            ></ion-icon>
           </a>
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>

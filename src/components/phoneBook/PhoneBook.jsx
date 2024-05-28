@@ -2,10 +2,10 @@ import "./phoneBookStyle.css";
 import { phoneBookData } from "./PhoneBookData.jsx";
 import Carousel from "react-bootstrap/Carousel";
 import EmptyFolder from "../../images/emptyFolder.png";
+import Navs from "../Navs.jsx";
 import React from "react";
 import RenderForm from "./AddContact.jsx";
 import Table from "react-bootstrap/Table";
-import Navs from "../Navs.jsx";
 
 function PhoneNumList() {
   if (phoneBookData.length === 0) {

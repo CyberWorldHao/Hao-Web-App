@@ -32,8 +32,17 @@ html {
   }
 }
 
-.fb:hover {
+.lead {
+  color: #fff;
+}
+
+.linkedIn {
+  background-color: transparent;
+}
+
+.linkedIn:hover {
   transform: scale(1.05);
+  transition: 0.3s;
 }
 
 .insta {
@@ -85,7 +94,7 @@ footer {
 }
 
 .snowflake {
-  color: #fff;
+  color: #fff !important;
   font-size: 1em;
   font-family: Arial;
   text-shadow: 0 0 1px #000;
