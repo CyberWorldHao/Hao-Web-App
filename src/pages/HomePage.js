@@ -133,7 +133,7 @@ function HomePage() {
             </p>
             <p>
               <a
-                className="btn btn-success"
+                className="btn btn-success btn-ice"
                 target="-_blank"
                 href="https://www.greenamerica.org/your-green-life/10-ways-you-can-fight-climate-change"
               >
