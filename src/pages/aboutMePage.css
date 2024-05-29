@@ -1,5 +1,9 @@
-html {
+/* html {
   scroll-behavior: smooth;
+} */
+
+.aboutMePageContainer{
+  background-color: burlywood;
 }
 
 .typewriter h1 {
@@ -36,28 +40,10 @@ html {
   color: #fff;
 }
 
-.linkedIn {
-  background-color: transparent;
-}
-
-.linkedIn:hover {
-  transform: scale(1.05);
+.contactIcon:hover {
+  transform: scale(1.15);
   transition: 0.3s;
-}
-
-.insta {
-  background-image: linear-gradient(
-    to top right,
-    yellow,
-    rgb(255, 166, 0),
-    red,
-    rgb(255, 0, 157),
-    rgb(209, 16, 216)
-  );
-}
-
-.insta:hover {
-  transform: scale(1.05);
+  background-color: transparent;
 }
 
 .typewrite {

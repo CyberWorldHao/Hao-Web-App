@@ -63,7 +63,7 @@ window.onload = function () {
 
 function AboutMePage() {
   return (
-    <div>
+    <div className="aboutMePageContainer">
       <div class="snowflakes" aria-hidden="true">
         <div class="snowflake">❅</div>
         <div class="snowflake">❅</div>
@@ -76,8 +76,8 @@ function AboutMePage() {
         <div class="snowflake">❆</div>
         <div class="snowflake">❄</div>
       </div>
-      <Navs />
-      <div class="snow position-relative overflow-hidden p-3 p-md-1 m-md-3 text-center">
+      <div class="snow position-relative overflow-hidden p-3 text-center">
+        <Navs />
         <div class="col-md-5 p-lg-5 mx-auto my-2">
           <h1 class="display-4 font-weight-normal">
             Welcome to My Profile Page
@@ -93,20 +93,80 @@ function AboutMePage() {
             </a>
           </h1>
           <p class="lead">
-            Want to learn more about me feel free to check out my LinkedIn
+            To discover more about me, please explore this website and visit the
+            icon portal below.
           </p>
           <a
-            class="btn linkedIn"
-            href="https://www.facebook.com/cwhao1314"
+            class="btn contactIcon"
+            href="mailto:ahaoahao2000@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ion-icon
+              name="mail-outline"
+              style={{
+                fontSize: "40px",
+                color: "#DEB887",
+                margin: "5% 0px 0px 1%",
+              }}
+            ></ion-icon>
+          </a>
+          <a
+            class="btn contactIcon"
+            href="https://www.linkedin.com/in/wei-hao-chong-32a29a211/"
             target="_blank"
             rel="noreferrer"
           >
             <ion-icon
               name="logo-linkedin"
-              className="logoLinkedIn"
               style={{
                 fontSize: "40px",
-                color: "#307eb0",
+                color: "#DEB887",
+                margin: "5% 0px 0px 1%",
+              }}
+            ></ion-icon>
+          </a>
+          <a
+            class="btn contactIcon"
+            href="https://github.com/CyberWorldHao"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ion-icon
+              name="logo-github"
+              style={{
+                fontSize: "40px",
+                color: "#DEB887",
+                margin: "5% 0px 0px 1%",
+              }}
+            ></ion-icon>
+          </a>
+          <a
+            class="btn contactIcon"
+            href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ion-icon
+              name="document-attach-outline"
+              style={{
+                fontSize: "40px",
+                color: "#DEB887",
+                margin: "5% 0px 0px 1%",
+              }}
+            ></ion-icon>
+          </a>
+          <a
+            class="btn contactIcon"
+            href="http://wa.link/nrb1fv"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ion-icon
+              name="logo-whatsapp"
+              style={{
+                fontSize: "40px",
+                color: "#DEB887",
                 margin: "5% 0px 0px 1%",
               }}
             ></ion-icon>

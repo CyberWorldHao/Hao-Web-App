@@ -15,10 +15,10 @@
   background-color: #806058 !important;
   border-radius: 20px !important;
   font-size: large;
-  margin: 10px;
+  margin: 0px 10px 10px 10px;
 
   .navLinkButton {
-    color: #d2b48c !important;
+    color: #deb887 !important;
     align-self: center;
   }
 
@@ -46,7 +46,7 @@
   }
 
   .aboutMeActiveBar {
-    background-image: radial-gradient(#fcebb6, #d2b48c) !important;
+    background-image: radial-gradient(#deb887, #fcebb6) !important;
     border-radius: 10px !important;
     color: #212529 !important;
     font-weight: bold;
