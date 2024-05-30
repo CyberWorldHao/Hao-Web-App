@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import AboutMePage from "./pages/AboutMePage";
+import AboutMePage from "./pages/AaboutMePage";
 import PhoneBook from "./components/phoneBook/PhoneBook";
 import React from "react";
 
