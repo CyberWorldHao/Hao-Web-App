@@ -83,14 +83,13 @@ function AboutMePage() {
             Welcome to My Profile Page
           </h1>
           <h1>
-            <a
-              href="#"
-              class="typewrite"
+            <div
+              className="typewrite"
               data-period="2000"
               data-type='[ "Hi there, welcome to my profile page.", "I am Wei Hao", "I am Creative.", "I Love Design.", "I Love to Develop." ]'
             >
-              <span class="wrap"></span>
-            </a>
+              <span className="wrap"></span>
+            </div>
           </h1>
           <p class="lead">
             To discover more about me, please explore this website and visit the
@@ -280,7 +279,8 @@ function AboutMePage() {
                   concepts.
                 </li>
                 <li>
-                  <b>Developer Student Clubs:</b> Learned Android Studio & Mobile App Development.
+                  <b>Developer Student Clubs:</b> Learned Android Studio &
+                  Mobile App Development.
                 </li>
                 <li>
                   <b>Sukmum8th:</b> Participated as a cheerleader and industrial
