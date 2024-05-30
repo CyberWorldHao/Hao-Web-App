@@ -97,7 +97,7 @@ function AboutMePage() {
           </p>
           <a
             class="btn contactIcon"
-            href="https://6092c37c4fadbb1e559dfe17--jovial-brahmagupta-cf2731.netlify.app/home"
+            href="/aboutme"
             target="_blank"
             rel="noreferrer"
           >
