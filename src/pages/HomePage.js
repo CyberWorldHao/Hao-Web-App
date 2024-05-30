@@ -5,7 +5,7 @@ import BloodSplatter from "../images/bloodSplatter.png";
 import BloodyHand from "../images/bloodyHand.png";
 import DolphinToTheLight from "../images/dolphinToTheLight.jpg";
 import Flowers from "../components/Flowers";
-import GhibliStudio from "../images/ghibliStudio.jpg";
+import GhibliStudio from "../images/ghiblistudio.jpg";
 import L4D2 from "../images/l4D2.png";
 import Love from "../images/love.jpg";
 import LoveBubble from "../images/loveBubble.png";
