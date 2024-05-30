@@ -97,7 +97,7 @@ function AboutMePage() {
           </p>
           <a
             class="btn contactIcon"
-            href="/aboutme"
+            href="/home"
             target="_blank"
             rel="noreferrer"
           >
