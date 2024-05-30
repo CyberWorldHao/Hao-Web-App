@@ -10,6 +10,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <HomePage />,
     // loader: rootLoader,
+    // loader: rootLoader,
     // children: [
     //   {
     //     path: "/phonebook",
