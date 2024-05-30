@@ -269,18 +269,18 @@ function AboutMePage() {
                   <b>Kelas Kebudayaan Cina (KKC):</b> Taught Chinese culture.
                 </li>
                 <li>
-                  <b>Unmasked Reality - Technical Team:</b> Developed a AR
-                  mobile application with Unity for a treasure hunt game.
+                  <b>Unmasked Reality - Technical Team:</b> Developed Unity AR
+                  mobile app for treasure hunt games.
                 </li>
                 <li>
-                  <b>JKP Kemas:</b> Organized health events.
+                  <b>JKP Kemas:</b> Organized health & fitness events.
                 </li>
                 <li>
                   <b>App Club:</b> Learned Git along with code theory &
                   concepts.
                 </li>
                 <li>
-                  <b>Developer Student Clubs:</b> Learned Android Studio.
+                  <b>Developer Student Clubs:</b> Learned Android Studio & Mobile App Development.
                 </li>
                 <li>
                   <b>Sukmum8th:</b> Participated as a cheerleader and industrial
