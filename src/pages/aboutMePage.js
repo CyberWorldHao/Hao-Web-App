@@ -98,12 +98,27 @@ function AboutMePage() {
           </p>
           <a
             class="btn contactIcon"
+            href="https://6092c37c4fadbb1e559dfe17--jovial-brahmagupta-cf2731.netlify.app/home"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ion-icon
+              name="home"
+              style={{
+                fontSize: "40px",
+                color: "#DEB887",
+                margin: "5% 0px 0px 1%",
+              }}
+            ></ion-icon>
+          </a>
+          <a
+            class="btn contactIcon"
             href="mailto:ahaoahao2000@gmail.com"
             target="_blank"
             rel="noreferrer"
           >
             <ion-icon
-              name="mail-outline"
+              name="mail"
               style={{
                 fontSize: "40px",
                 color: "#DEB887",
@@ -146,13 +161,29 @@ function AboutMePage() {
             href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing"
             target="_blank"
             rel="noreferrer"
+            style={{
+              margin: "1% 0px 0px 1%",
+              position: "relative" /* Make the container relative */,
+              display:
+                "inline-block" /* Ensure the container fits the content */,
+            }}
           >
             <ion-icon
-              name="document-attach-outline"
+              name="document-attach"
               style={{
                 fontSize: "40px",
                 color: "#DEB887",
-                margin: "5% 0px 0px 1%",
+              }}
+            ></ion-icon>
+            <ion-icon
+              name="logo-google"
+              style={{
+                fontSize: "16px",
+                color: "#111417",
+                position:
+                  "absolute" /* Position absolutely within the container */,
+                bottom: "26%" /* Align to bottom */,
+                right: "33%" /* Align to right */,
               }}
             ></ion-icon>
           </a>
@@ -181,140 +212,212 @@ function AboutMePage() {
           <div class="col-md-8 blog-main">
             <div class="blog-post">
               <br></br>
-              <h2 class="blog-post-title">Story of My Life</h2>
+              <h2 class="blog-post-title">
+                My Curriculum Vitae and University Life Story
+              </h2>
               <p id="GoingDown">
-                This blog post is mainly about my curriculum vitae and some my
-                University life & Story Feel Free to contact me by using{" "}
-                <a href="mailto:ahaoahao2000@gmail.com">E-mail</a> or Direct
-                Message using{" "}
+                Welcome to my blog! Here, I’d like to share some details about
+                my curriculum vitae and a few stories from my university life.
+                If you have any questions or would like to get in touch, please
+                feel free to contact me via{" "}
+                <a href="mailto:ahaoahao2000@gmail.com">E-mail</a> or direct
+                message me on{" "}
                 <a href="wa.link/twvut3" target="_blank">
                   WhatsApp
                 </a>
                 .
               </p>
               <hr />
+              <h2 class="blog-post-title">About Me</h2>
               <p>
-                The <b>little story</b> on my resume actually is a subject that
-                needs us to find third-party collaborators to encourage people
-                to reduce the usage of mobile phones and more carry out more
-                interaction with people. Due to one of an international student
-                delay on their work causing our schedule event plan postponed. I
-                think it is because he needs to go back to his country to
-                somehow delay the progress. In addition, due to the pandemic
-                make us hard to communicate to get things done.
+                I am Wei Hao, and I'm graduated from{" "}
+                <b>University of Malaya, Malaysia</b> with a degree in{" "}
+                <b>
+                  Bachelor of Computer Science (Software Engineering), CGPA
+                  3.85/4.0
+                </b>
+                . My time at university was filled with valuable experiences,
+                both academically and personally.
               </p>
-              <blockquote>
-                <p>
-                  The leader of the group also finds some difficulties in
-                  leading the team due to unclear instruction of the project as
-                  well as some group members also late to the meeting. Then
-                  fighting is born from this flustered situation. The good
-                  things we still can understand each other, and making amend to
-                  what we’ve lost.
-                  <br />
-                  <strong>
-                    Thank you for another teammate help me putting the broken
-                    group pieces into one & together.
-                  </strong>
-                </p>
-              </blockquote>
+              <br />
+
+              <h2 class="blog-post-title">University Life and Experiences</h2>
               <p>
-                Free to view my basic website also you use the navigation to go
-                to other pages. Although Nothing much functionality XD.
+                During my time at university, I was actively involved in various
+                activities and projects that helped shape my skills and
+                knowledge. Here are a few highlights:
+              </p>
+
+              <ul>
+                <li>
+                  <b>Academic Achievements:</b> I consistently maintained a high
+                  GPA and received several awards for my academic performance.
+                </li>
+                <li>
+                  <b>Extracurricular Activities:</b> I was a member of several
+                  clubs and participated in numerous events, which I found both
+                  enriching and enjoyable.
+                </li>
+              </ul>
+              <p>Here are some of the clubs and events I participated in:</p>
+              <ul>
+                <li>
+                  <b>Octa Sports Fest (OSF):</b> Organized sports events to
+                  encourage physical activity.
+                </li>
+                <li>
+                  <b>Kelas Kebudayaan Cina (KKC):</b> Taught Chinese culture.
+                </li>
+                <li>
+                  <b>Unmasked Reality - Technical Team:</b> Developed a AR
+                  mobile application with Unity for a treasure hunt game.
+                </li>
+                <li>
+                  <b>JKP Kemas:</b> Organized health events.
+                </li>
+                <li>
+                  <b>App Club:</b> Learned Git along with code theory &
+                  concepts.
+                </li>
+                <li>
+                  <b>Developer Student Clubs:</b> Learned Android Studio.
+                </li>
+                <li>
+                  <b>Sukmum8th:</b> Participated as a cheerleader and industrial
+                  dancer.
+                </li>
+                <li>
+                  <b>Technical Team Learning:</b> Gained skills in computer,
+                  wiring and speaker setup.
+                </li>
+              </ul>
+              <p>
+                I believe there are more events and activities I participated
+                in, but I can't recall all the details. Despite the challenges,
+                such as the pandemic disrupting our plans, I enjoyed and learned
+                a lot from these experiences.
+              </p>
+              <p>
+                One memorable project involved finding third-party collaborators
+                to encourage people to reduce their mobile phone usage and
+                engage more in face-to-face interactions. We faced several
+                challenges, including an international teammate returning to
+                their country and the pandemic complicating communication. Our
+                group leader struggled with providing clear instructions, and
+                some members were late to meetings, leading to conflicts.
+                Despite these hurdles, we managed to understand each other and
+                made amends, thanks to the efforts of a dedicated teammate who
+                helped piece our broken group back together.
+              </p>
+              <h2 class="blog-post-title">
                 <br />
-                <em>
-                  This website may be updated from time to time for applying to
-                  other languages or features.
-                </em>
-              </p>
-              <h2>To Access My Certifications</h2>
+                The 4-Cs Value
+              </h2>
               <p>
+                Deep down, I believe that these four key values are very
+                significant to everyone's life. Understanding and utilizing
+                these values in any aspect of our life-career, self-development,
+                and relationships can make our future more meaningful and
+                colorful, with fewer misunderstandings and mental health
+                problems. These values are:
+              </p>
+              <strong>
+                <ol>
+                  <li>Creativity</li>
+                  <li>Critical thinking</li>
+                  <li> Collaboration</li>
+                  <li>Communication</li>
+                </ol>
+              </strong>
+              <p>
+                A team without spirit is just like a body in a PVS(persistent
+                vegetative state). Therefore, I strive to incorporate unity into
+                teams, helping them grow stronger.
+              </p>
+              <h2 class="blog-post-title">
+                <br />
+                Something About Me
+              </h2>
+              <p>Here are a few traits that define me:</p>
+              <b>
+                <ul>
+                  <li>Curious</li>
+                  <li>Impatient</li>
+                  <li>Quick Learner</li>
+                  <li>Mind-Absent</li>
+                  <li>Anxious</li>
+                  <li>Far-Sighted</li>
+                  <li>Detail-Oriented</li>
+                  <li>
+                    Optimistic - I believe that after a hurricane, a rainbow
+                    always follows.
+                  </li>
+                </ul>
+              </b>
+              <h2 class="blog-post-title">
+                <br />
+                Looking Forward
+              </h2>
+              <p>
+                Now that I have graduated and have been working for several
+                years, I am excited to apply my skills and knowledge in a
+                professional setting. I am particularly interested in{" "}
+                <b>Full-Stack Developer</b>, and I am actively seeking
+                opportunities in this field.
+              </p>
+              <h2 class="blog-post-title">
+                <br />
+                Contact Me
+              </h2>
+              <p>
+                I would love to hear from you! If you have any questions or
+                would like to discuss potential opportunities, please feel free
+                to reach out:
+              </p>
+              <b>
+                <ul>
+                  <li>{"Email: ahaoahao2000@gmail.com"}</li>
+                  <li>{"WhatsApp: +6017-7296988"}</li>
+                </ul>
+              </b>
+              <p>
+                Feel free to visit my personal website where you can navigate to
+                other pages. Although it currently has limited functionality, I
+                update it periodically with new languages or features.
+              </p>
+              <br />
+              <p>
+                You can also access my certifications on Google Drive:{" "}
                 <a
                   href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Check out my Google Drive for E-cert
+                  Google Drive E-certifications
                 </a>
               </p>
-              <h3>Events, Club, Activities</h3>
-              <p>
-                All of the below, are clubs and Events I join before, Some of
-                them join as AJK to organize events & activities to ask people
-                to join such as OSF(Organize sport event), Kkc (Teaching Chinese
-                Culture), Unmasked - technical team (develop a mobile
-                application for the game), JKP Kemas (Organize health event).
-                Some of them is to learn including App Clubs(learn git),
-                Developer Student Clubs(learn android studio). I got taking part
-                to sukmum8th cheerleader and industrial dancing also video clip
-                of performance can be accessed in my Instagram.
-              </p>
-              <pre>
-                <code>
-                  <ul>
-                    <li>Octa Sports Fest</li>
-                    <li>Kelas Kebudayaan Cina</li>
-                    <li>Sukmum8th</li>
-                    <li>App Club</li>
-                    <li>Unmasked Reality</li>
-                    <li>Industrial Dancing</li>
-                    <li>Developer Student Clubs</li>
-                    <li>JKP KEMAS</li>
-                  </ul>
-                </code>
-              </pre>
-              <p>
-                I think there are more but I think I can't remember clearing.
-                Like a technical team learning (wiring & speaker) event and
-                other one-day events . . . Can't really remember the details.
-              </p>
-              <p>
-                Actually, I learn quite a lot of things in all of the activities
-                above. I also very enjoy all of it. If there isn't a pandemic I
-                think I still will continue to join them.
-              </p>
-              <h3>4-C value</h3>
-              <p>
-                Deep down I believe that these 4 keys are very significant to
-                everyone's life. If we can understanding and utilize these 4
-                values inside of any aspect of our life like career,
-                self-development as well as relationship. Our future will become
-                more meaningful & colorful and lesser misunderstanding & mental
-                health problems. A future that we would not be shocked when we
-                see storms that are stronger than before.
-              </p>
-              <ul>
-                <li>Creativity</li>
-                <li>Critical thinking</li>
-                <li> Collaboration</li>
-                <li>Communication</li>
-              </ul>
-              <p>
-                A team without its spirit just like a body in PVS. Thus, I will
-                also put some unity into teams, to make them grow stronger.
-              </p>
-              <p>Something About Me</p>
-              <ol>
-                <li>Curious</li>
-                <li>Inpatient</li>
-                <li>Quick Learner</li>
-                <li>Mind-Absent</li>
-                <li>Anxious</li>
-                <li>far-sighted</li>
-                <li>Detail</li>
-              </ol>
-              <p>
-                Optimistic, believe after a hurricane always comes a rainbow.
-              </p>
+              <br />
               <br />
             </div>
           </div>
         </div>
       </main>
-      <footer class="text-center font-italic" id="GoingDown">
+      <footer class="text-center font-italic pt-2" id="GoingDown">
         <p>
-          Copyright &copy 2021 JavaJam Coffee House
+          Copyright &copy; 2024 Hao's Web App <br />
           <a href="mailto:ahaoahao2000@gmail.com">ahaoahao2000@gmail.com</a>
+          {" | "}
+          <a href="https://www.linkedin.com/in/wei-hao-chong-32a29a211/">
+            LinkedIn
+          </a>
+          {" | "}
+          <a href="https://github.com/CyberWorldHao">GitHub</a>
+          {" | "}
+          <a href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing">
+            E-Cert
+          </a>
+          {" | "}
+          <a href="http://wa.link/nrb1fv">+6017-7296988</a>
         </p>
       </footer>
     </div>
