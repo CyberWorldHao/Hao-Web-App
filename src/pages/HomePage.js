@@ -17,7 +17,7 @@ function HomePage() {
   return (
     <div className="homePageContainer">
       <header
-        className="header p-2"
+        className="homePageHeader p-2"
         style={{ display: "flex", flexDirection: "row" }}
       >
         <img
@@ -27,14 +27,7 @@ function HomePage() {
           className="rounded my-auto mx-2"
           alt="pink dolphin"
         />
-        <h1
-          className="my-auto pb-2"
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#555357",
-          }}
-        >
+        <h1 className="my-auto pb-2 Title">
           Welcome to Pinky Dolphin To The Light
         </h1>
       </header>
@@ -202,7 +195,10 @@ function HomePage() {
               />
               Are U a Left 4 Dead Lover!
             </h2>
-            <p className="l4d2Img forImgDisplay" style={{ textAlign: "justify" }}>
+            <p
+              className="l4d2Img forImgDisplay"
+              style={{ textAlign: "justify" }}
+            >
               If the answer is yes, let me take you to the music video by the
               Midnight Riders Band.
               <img
@@ -296,6 +292,7 @@ function HomePage() {
         </div>
         <br />
       </div>
+      <br />
       <div className="text-center font-italic">
         <p>
           Copyright &copy; 2024 Hao's Web App <br />

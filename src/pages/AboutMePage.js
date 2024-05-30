@@ -22,7 +22,7 @@ TxtType.prototype.tick = function () {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
-  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+  this.el.innerHTML = '<span className="wrap">' + this.txt + "</span>";
 
   var that = this;
   var delta = 200 - Math.random() * 100;
@@ -64,25 +64,25 @@ window.onload = function () {
 function AboutMePage() {
   return (
     <div className="aboutMePageContainer">
-      <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
+      <div className="snowflakes" aria-hidden="true">
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❆</div>
+        <div className="snowflake">❄</div>
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❆</div>
+        <div className="snowflake">❄</div>
+        <div className="snowflake">❅</div>
+        <div className="snowflake">❆</div>
+        <div className="snowflake">❄</div>
       </div>
-      <div class="snow position-relative overflow-hidden p-3 text-center">
+      <div className="snow position-relative overflow-hidden p-3 text-center">
         <Navs />
-        <div class="col-md-5 p-lg-5 mx-auto my-2">
-          <h1 class="display-4 font-weight-normal">
+        <div className="col-md-5 p-lg-5 aboutMePageContentContainer">
+          <h1 className="display-4 font-weight-normal aboutMeHeader">
             Welcome to My Profile Page
           </h1>
-          <h1>
+          <h1 className="aboutMeHeader">
             <div
               className="typewrite"
               data-period="2000"
@@ -91,12 +91,12 @@ function AboutMePage() {
               <span className="wrap"></span>
             </div>
           </h1>
-          <p class="lead">
+          <p className="leadText">
             To discover more about me, please explore this website and visit the
             icon portal below.
           </p>
           <a
-            class="btn contactIcon"
+            className="btn contactIcon"
             href="/home"
             target="_self"
             rel="noreferrer"
@@ -111,7 +111,7 @@ function AboutMePage() {
             ></ion-icon>
           </a>
           <a
-            class="btn contactIcon"
+            className="btn contactIcon"
             href="mailto:ahaoahao2000@gmail.com"
             target="_blank"
             rel="noreferrer"
@@ -126,7 +126,7 @@ function AboutMePage() {
             ></ion-icon>
           </a>
           <a
-            class="btn contactIcon"
+            className="btn contactIcon"
             href="https://www.linkedin.com/in/wei-hao-chong-32a29a211/"
             target="_blank"
             rel="noreferrer"
@@ -141,7 +141,7 @@ function AboutMePage() {
             ></ion-icon>
           </a>
           <a
-            class="btn contactIcon"
+            className="btn contactIcon"
             href="https://github.com/CyberWorldHao"
             target="_blank"
             rel="noreferrer"
@@ -156,7 +156,7 @@ function AboutMePage() {
             ></ion-icon>
           </a>
           <a
-            class="btn contactIcon"
+            className="btn contactIcon"
             href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing"
             target="_blank"
             rel="noreferrer"
@@ -187,7 +187,7 @@ function AboutMePage() {
             ></ion-icon>
           </a>
           <a
-            class="btn contactIcon"
+            className="btn contactIcon"
             href="http://wa.link/nrb1fv"
             target="_blank"
             rel="noreferrer"
@@ -202,16 +202,16 @@ function AboutMePage() {
             ></ion-icon>
           </a>
         </div>
-        <div class="product-device shadow-sm d-none d-md-block"></div>
-        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+        <div className="product-device shadow-sm d-none d-md-block"></div>
+        <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
       </div>
 
-      <main role="main" class="container">
-        <div class="row">
-          <div class="col-md-8 blog-main">
-            <div class="blog-post">
+      <main role="main" className="aboutMePageMainContainer">
+        <div className="row">
+          <div className="col-md-8 blog-main">
+            <div className="blog-post">
               <br></br>
-              <h2 class="blog-post-title">
+              <h2 className="blog-post-title">
                 My Curriculum Vitae and University Life Story
               </h2>
               <p id="GoingDown">
@@ -227,7 +227,7 @@ function AboutMePage() {
                 .
               </p>
               <hr />
-              <h2 class="blog-post-title">About Me</h2>
+              <h2 className="blog-post-title">About Me</h2>
               <p>
                 I am Wei Hao, and I'm graduated from{" "}
                 <b>University of Malaya, Malaysia</b> with a degree in{" "}
@@ -240,7 +240,9 @@ function AboutMePage() {
               </p>
               <br />
 
-              <h2 class="blog-post-title">University Life and Experiences</h2>
+              <h2 className="blog-post-title">
+                University Life and Experiences
+              </h2>
               <p>
                 During my time at university, I was actively involved in various
                 activities and projects that helped shape my skills and
@@ -309,7 +311,7 @@ function AboutMePage() {
                 made amends, thanks to the efforts of a dedicated teammate who
                 helped piece our broken group back together.
               </p>
-              <h2 class="blog-post-title">
+              <h2 className="blog-post-title">
                 <br />
                 The 4-Cs Value
               </h2>
@@ -334,7 +336,7 @@ function AboutMePage() {
                 vegetative state). Therefore, I strive to incorporate unity into
                 teams, helping them grow stronger.
               </p>
-              <h2 class="blog-post-title">
+              <h2 className="blog-post-title">
                 <br />
                 Something About Me
               </h2>
@@ -354,7 +356,7 @@ function AboutMePage() {
                   </li>
                 </ul>
               </b>
-              <h2 class="blog-post-title">
+              <h2 className="blog-post-title">
                 <br />
                 Looking Forward
               </h2>
@@ -365,7 +367,7 @@ function AboutMePage() {
                 <b>Full-Stack Developer</b>, and I am actively seeking
                 opportunities in this field.
               </p>
-              <h2 class="blog-post-title">
+              <h2 className="blog-post-title">
                 <br />
                 Contact Me
               </h2>
@@ -402,7 +404,7 @@ function AboutMePage() {
           </div>
         </div>
       </main>
-      <footer class="text-center font-italic pt-2" id="GoingDown">
+      <div className="aboutMeFooter">
         <p>
           Copyright &copy; 2024 Hao's Web App <br />
           <a href="mailto:ahaoahao2000@gmail.com">ahaoahao2000@gmail.com</a>
@@ -410,7 +412,7 @@ function AboutMePage() {
           <a href="https://www.linkedin.com/in/wei-hao-chong-32a29a211/">
             LinkedIn
           </a>
-          {" | "}
+          <br />
           <a href="https://github.com/CyberWorldHao">GitHub</a>
           {" | "}
           <a href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing">
@@ -419,7 +421,7 @@ function AboutMePage() {
           {" | "}
           <a href="http://wa.link/nrb1fv">+6017-7296988</a>
         </p>
-      </footer>
+      </div>
     </div>
   );
 }

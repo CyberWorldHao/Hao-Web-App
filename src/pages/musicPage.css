@@ -1,17 +1,35 @@
-* {
-  box-sizing: border-box;
-}
-
-.body {
-  background-color: #fcebb6;
-  color: #221811;
+.musicPageContainer {
+  background: linear-gradient(
+    to bottom,
+    #2e0854,
+    #4b0082,
+    #6a0dad,
+    #9370db,
+    #e6e6fa
+  );
+  color: #e6e6fa;
   font-family: Verdana, Arial, sans-serif;
-  /* background-image: url(images/background.gif); */
 }
 
-.header {
-  background-color: #806058;
+.musicPageContentContainer {
+  padding: 15px 80px 0px 80px;
+}
+
+.musicPageHeader {
   height: 85px;
+  text-align: center;
+  padding-top: 1%;
+}
+
+.cardHeader {
+  color: #000;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.cardText {
+  color: #000;
+  text-align: justify;
 }
 
 .main {
@@ -27,13 +45,58 @@
 }
 
 .h4 {
-  background-color: #d2b48c;
   font-size: 1.2em;
   padding-left: 10px;
   padding-bottom: 5px;
 }
 
-.details {
-  padding-left: 20%;
-  padding-right: 20%;
+.singerImage {
+  padding: 20px 0px 0px 80px;
+}
+
+.imageBanner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: center;
+}
+
+.explosionGradient {
+  width: 400px;
+  background-image: radial-gradient(
+    #f5f5f5,
+    #ffff00,
+    #ffd700,
+    #ffa500,
+    #ff6347,
+    #ff4500,
+    #8b0000,
+    #000000
+  ) !important;
+  /* background-image: linear-gradient(rgba(252, 235, 182, 1), rgba(0, 0, 0, 1)); */
+}
+
+.musicPageFooter {
+  font-size: large;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 10px;
+  color: #000;
+  margin-top: 80px;
+  padding-top: 20px;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent
+    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
+    center;
+  z-index: -1;
 }

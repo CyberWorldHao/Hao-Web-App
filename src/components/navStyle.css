@@ -62,11 +62,6 @@
   display: flex;
 }
 
-.disabledMessage {
-  font-size: 12px;
-  color: #575a5e;
-}
-
 .navLinkButton {
   color: #fa647d !important;
   align-self: center;
@@ -131,4 +126,57 @@
 .activeBar {
   background-image: radial-gradient(#f7b8b6, #ffffe6) !important;
   border-radius: 10px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .navs {
+    font-size: small;
+  }
+
+  .navsPhoneBook {
+    font-size: small;
+  }
+
+  .navsAboutMe {
+    font-size: small;
+  }
+  .disabledMessage {
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navs {
+    font-size: medium;
+  }
+
+  .navsPhoneBook {
+    font-size: medium;
+  }
+
+  .navsAboutMe {
+    font-size: medium;
+  }
+
+  .disabledMessage {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navs {
+    font-size: large;
+  }
+
+  .navsPhoneBook {
+    font-size: large;
+  }
+
+  .navsAboutMe {
+    font-size: large;
+  }
+
+  .disabledMessage {
+    font-size: 12px;
+  }
 }
