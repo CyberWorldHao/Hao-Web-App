@@ -98,6 +98,7 @@ function AboutMePage() {
           <a
             class="btn contactIcon"
             href="/home"
+            target="_self"
             rel="noreferrer"
           >
             <ion-icon
