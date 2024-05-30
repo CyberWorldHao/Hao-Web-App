@@ -7,7 +7,7 @@ import React from "react";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "https://main--ahaoahao.netlify.app/",
     element: <HomePage />,
     // loader: rootLoader,
     // loader: rootLoader,
@@ -20,17 +20,17 @@ const router = createBrowserRouter([
     // ],
   },
   {
-    path: "/home",
+    path: "https://main--ahaoahao.netlify.app/home",
     element: <HomePage />,
     // loader: teamLoader,
   },
   {
-    path: "/phonebook",
+    path: "https://main--ahaoahao.netlify.app/phonebook",
     element: <PhoneBook />,
     // loader: teamLoader,
   },
   {
-    path: "/aboutme",
+    path: "https://main--ahaoahao.netlify.app/aboutme",
     element: <AboutMePage />,
     // loader: teamLoader,
   },
