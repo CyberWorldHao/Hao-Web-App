@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutMePage from "./pages/AboutMePage";
+import MusicPage from "./pages/MusicPage";
 import PhoneBook from "./components/phoneBook/PhoneBook";
 import React from "react";
 
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
     element: <AboutMePage />,
     // loader: teamLoader,
   },
+  {
+    path: "/music",
+    element: <MusicPage />,
+    // loader: teamLoader,
+  },
 ]);
 
 function App() {
@@ -43,6 +49,7 @@ function App() {
         <HomePage />
         <PhoneBook />
         <AboutMePage />
+        <MusicPage />
       </RouterProvider>
     </div>
   );
