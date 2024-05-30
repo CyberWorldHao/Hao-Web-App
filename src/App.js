@@ -41,6 +41,8 @@ function App() {
     <div className="App">
       <RouterProvider router={router}>
         <HomePage />
+        <PhoneBook />,
+        <AboutMePage />,
       </RouterProvider>
     </div>
   );
