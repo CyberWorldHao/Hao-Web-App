@@ -53,6 +53,46 @@
   }
 }
 
+.navsMusic {
+  /* background-color: #806058 !important; */
+  background: linear-gradient(
+    225deg,
+    #000002,
+    #161f1c,
+    #222b4c,
+    #193b7a,
+    #8a86b9,
+    #d19c94,
+    #895965
+  );
+  border-radius: 20px !important;
+  font-size: large;
+  margin: 0px 10px 10px 10px;
+
+  .navLinkButton {
+    color: #e6e6fa !important;
+    align-self: center;
+  }
+
+  .navLinkButton:hover {
+    color: #e6e6fa !important;
+    transition: color 0.8s ease;
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .disableNavLinkButton {
+    color: #e6e6fa !important;
+    margin-bottom: -20px;
+    cursor: default;
+  }
+
+  .musicActiveBar {
+    border: thick solid;
+    border-radius: 10px !important;
+  }
+}
+
 .navItem {
   display: flex;
 }
@@ -86,6 +126,7 @@
 }
 
 .musicNavLinkButton {
+  color: #e6e6fa !important;
   align-self: center;
   cursor: default;
 }

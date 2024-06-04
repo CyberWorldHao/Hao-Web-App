@@ -5,7 +5,6 @@ import React from "react";
 
 function Navs() {
   const location = useLocation().pathname;
-  console.log(location.length);
   return (
     <Nav
       className={
@@ -13,6 +12,8 @@ function Navs() {
           ? "navsPhoneBook"
           : location.includes("/aboutme")
           ? "navsAboutMe"
+          : location.includes("/music")
+          ? "navsMusic"
           : "navs"
       }
       fill
@@ -52,7 +53,7 @@ function Navs() {
       </Nav.Item>
       <Nav.Item
         className={
-          location.includes("/music") ? "navItem activeBar" : "navItem"
+          location.includes("/music") ? "navItem musicActiveBar" : "navItem"
         }
       >
         <Nav.Link

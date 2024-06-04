@@ -15,7 +15,7 @@
   }
 }
 
-.hr {
+.phoneBookHr {
   border: 2px solid;
   border-color: black;
   margin: 5px 0px;
@@ -48,7 +48,7 @@
   }
 }
 
-.header2 {
+.phoneBookHeader2 {
   text-align: left;
   padding: 5% 0% 2% 15%;
 }
@@ -59,7 +59,7 @@
     text-align: left;
   }
 }
-p {
+.phoneBookp {
   color: rgb(33, 37, 41);
   font-weight: 400;
 }

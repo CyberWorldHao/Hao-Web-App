@@ -1,10 +1,12 @@
 import "./musicPage.css";
+import ALovelyNight from "../images/aLovelyNight.jpg";
 import Card from "react-bootstrap/Card";
-import Greg from "../images/greg.jpg";
-import GregThumbNail from "../images/gregThumbNail.jpg";
-import Melanie from "../images/melanie.jpg";
-import MelanieThumbNail from "../images/melanieThumbNail.jpg";
+import CityOfStars from "../images/cityOfStars.png";
+import Earth from "../images/earth.jpg";
+import Epilogue from "../images/epilogue.jpg";
+import lilDickyEarth from "../images/lilDickyEarth.png";
 import Navs from "../components/Navs";
+import Planetarium from "../images/planetarium.jpg";
 import RaidersPoster from "../images/RaidersPoster.jpg";
 import React from "react";
 import Riders from "../images/Riders.png";
@@ -14,47 +16,94 @@ function MusicPage() {
     <div className="musicPageContainer">
       <div className="musicPageContentContainer">
         <div className="container">
-          <div class="stars" />
+          <div className="starsTop" />
+          <div className="starsRight" />
+          <div className="starsLeft" />
+          <div className="starsBottom" />
+
           <header className="musicPageHeader">
             <h1>Those who wish to sing always find a song</h1>
           </header>
           <Navs />
           <div>
-            <h2>Music at La La Land</h2>
-            <p >
-              The first Friday night each month at JavaJam is a special night.
-              Join us from 8 pm to 11 pm for some music you won't want to miss!
+            <h2 className="mt-5">Music at La La Land</h2>
+            <p>
+              Step into the enchanting world of "La La Land," where dreams come
+              alive against the vibrant backdrop of Los Angeles. This critically
+              acclaimed musical masterpiece, directed by Damien Chazelle, weaves
+              the spellbinding tale of Mia and Sebastian, played by the
+              charismatic duo Emma Stone and Ryan Gosling. Their heartfelt
+              journey of love and ambition is beautifully underscored by
+              mesmerizing music and stunning visuals that pay homage to classic
+              Hollywood while offering a fresh, modern twist. With its dazzling
+              dance sequences, unforgettable songs, and a story that tugs at the
+              heartstrings, "La La Land" is an unmissable cinematic experience
+              that will leave you inspired and dreaming long after the final
+              note fades.
             </p>
-            <h4>January</h4>
-            <div className="singerImage">
-              <a href={Melanie}>
+            <h4 className="musicPageHeader4">City of Stars</h4>
+            <div className="soundTrackImg">
+              <a
+                href={"https://www.youtube.com/watch?v=GTWqwSNQCcg"}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
-                  src={Melanie}
-                  className="floatleft"
-                  alt="Melanie Morris"
-                  width="80"
-                  height="80"
+                  src={CityOfStars}
+                  alt="City Of Stars"
+                  className="songImg"
                 />
               </a>
-              Melanie Morris entertains with her melodic folk style.
+              {` Best Original Score, and Best Original Song`}
             </div>
-            <h4>February</h4>
-            <div className="singerImage">
-              <a href={Greg}>
+            <h4 className="musicPageHeader4">A Lovely Night</h4>
+            <div className="soundTrackImg">
+              <a
+                href={"https://www.youtube.com/watch?v=_8w9rOpV3gc"}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
-                  src={Greg}
-                  className="floatleft"
-                  alt="Tahoe Greg"
-                  width="80"
-                  height="80"
+                  src={ALovelyNight}
+                  alt="A Lovely Night"
+                  className="songImg"
                 />
               </a>
-              Tahoe Greg is back from his tour. New songs. New stories.
+              {` A playful, flirtatious, elegant dance at twilight, showcasing
+              their chemistry`}
+            </div>
+            <h4 className="musicPageHeader4">Planetarium</h4>
+            <div className="soundTrackImg">
+              <a
+                href={"https://www.youtube.com/watch?v=lNFbbWOM5FU"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={Planetarium}
+                  alt="A Lovely Night"
+                  className="songImg"
+                />
+              </a>
+              {` Mia and Sebastian share a magical moment while dancing among the
+              stars.`}
+            </div>
+            <h4 className="musicPageHeader4">Epilogue</h4>
+            <div className="soundTrackImg">
+              <a
+                href={"https://www.youtube.com/watch?v=Lw0U5rhrhaI"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={Epilogue} alt="Epilogue" className="songImg" />
+              </a>
+              {` Sparking a fantasy of their ideal relationship encapsulates the
+              love and sacrifice`}
             </div>
             <br />
             <br />
             <br />
-            <hr className="my-4" />
+            <hr className="my-5" />
             <div className="imageBanner">
               <Card className="explosionGradient">
                 <Card.Img variant="top" src={Riders} />
@@ -70,7 +119,7 @@ function MusicPage() {
                     encountered directly, several posters advertise them.
                   </Card.Text>
                   <a
-                    className="btn btn-secondary"
+                    className="btn btn-dark"
                     target="_blank"
                     href="https://www.midnight-riders.com/"
                     role="button"
@@ -80,23 +129,26 @@ function MusicPage() {
                   </a>
                 </Card.Body>
               </Card>
-              <Card className="explosionGradient">
-                <Card.Img variant="top" src={Riders} />
-                <Card.Img variant="top" src={RaidersPoster} />
+              <Card className="defaultCardTheme">
+                <Card.Img variant="top" src={lilDickyEarth} />
+                <Card.Img variant="top" src={Earth} />
                 <Card.Body>
                   <Card.Title>
                     <h1 className="cardHeader">Special Event!</h1>
                   </Card.Title>
                   <Card.Text className="cardText">
-                    The Midnight Riders is here.The Hard rock band in the Left 4
-                    Dead universe. They are famous for their pyrotechnic light
-                    shows performed during their live performances. Though never
-                    encountered directly, several posters advertise them.
+                    "Lil Dicky Earth" is a comedic rap song addresses
+                    environmental issues and promotes awareness about climate
+                    change and conservation. The music video features animated
+                    versions of numerous celebrities voicing different animals
+                    and elements of nature, including Ariana Grande, Justin
+                    Bieber, Snoop Dogg, Ed Sheeran, Leonardo DiCaprio, and many
+                    others.
                   </Card.Text>
                   <a
-                    className="btn btn-secondary"
+                    className="btn btn-primary"
                     target="_blank"
-                    href="https://www.midnight-riders.com/"
+                    href="https://welovetheearth.org/"
                     role="button"
                     rel="noreferrer"
                   >

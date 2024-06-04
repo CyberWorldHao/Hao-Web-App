@@ -35,7 +35,7 @@ function PhoneBook() {
       <div className="phoneBookContentFrame">
         <Navs />
         <h1>Phone Book</h1>
-        <hr className="hr" />
+        <hr className="phoneBookHr" />
         <Carousel data-bs-theme="dark" interval={null}>
           {phoneBookData.length ? (
             <Carousel.Item>
@@ -60,7 +60,7 @@ function PhoneBook() {
                   alt="File Not Found"
                   className="emptyPhoneListImg"
                 />
-                <p className="credit">
+                <p className="credit phoneBookp">
                   {"Designed by "}
                   <a
                     href="http://www.freepik.com"
@@ -70,7 +70,7 @@ function PhoneBook() {
                     Freepik
                   </a>
                 </p>
-                <p className="emptyCaption">
+                <p className="emptyCaption phoneBookp">
                   The Phone Book is Empty. Try add some to your website's local
                   storage.
                 </p>
@@ -79,7 +79,7 @@ function PhoneBook() {
           )}
           <Carousel.Item>
             <div style={{ display: "flex", flexDirection: "row" }}>
-              <h2 className="header2 pl-5">Add New Contact</h2>
+              <h2 className="phoneBookHeader2 pl-5">Add New Contact</h2>
               <ion-icon
                 name="call-outline"
                 style={{
