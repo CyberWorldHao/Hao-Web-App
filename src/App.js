@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutMePage from "./pages/AboutMePage";
 import MusicPage from "./pages/MusicPage";
+import RelaxPage from "./pages/RelaxPage";
 import PhoneBook from "./components/phoneBook/PhoneBook";
 import React from "react";
 
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
   {
     path: "/music",
     element: <MusicPage />,
+    // loader: teamLoader,
+  },
+  {
+    path: "/relax",
+    element: <RelaxPage />,
     // loader: teamLoader,
   },
 ]);

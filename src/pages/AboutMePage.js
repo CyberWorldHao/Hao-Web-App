@@ -91,7 +91,7 @@ function AboutMePage() {
               <span className="wrap"></span>
             </div>
           </h1>
-          <p className="leadText">
+          <p className="aboutMeLeadText">
             To discover more about me, please explore this website and visit the
             icon portal below.
           </p>
@@ -206,204 +206,209 @@ function AboutMePage() {
         <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
       </div>
 
-      <main role="main" className="aboutMePageMainContainer">
-        <div className="row">
-          <div className="col-md-8 blog-main">
-            <div className="blog-post">
-              <br></br>
-              <h2 className="blog-post-title">
-                My Curriculum Vitae and University Life Story
-              </h2>
-              <p id="GoingDown">
-                Welcome to my blog! Here, I’d like to share some details about
-                my curriculum vitae and a few stories from my university life.
-                If you have any questions or would like to get in touch, please
-                feel free to contact me via{" "}
-                <a href="mailto:ahaoahao2000@gmail.com">E-mail</a> or direct
-                message me on{" "}
-                <a href="wa.link/twvut3" target="_blank">
-                  WhatsApp
-                </a>
-                .
-              </p>
-              <hr />
-              <h2 className="blog-post-title">About Me</h2>
-              <p>
-                I am Wei Hao, and I'm graduated from{" "}
-                <b>University of Malaya, Malaysia</b> with a degree in{" "}
-                <b>
-                  Bachelor of Computer Science (Software Engineering), CGPA
-                  3.85/4.0
-                </b>
-                . My time at university was filled with valuable experiences,
-                both academically and personally.
-              </p>
-              <br />
-
-              <h2 className="blog-post-title">
-                University Life and Experiences
-              </h2>
-              <p>
-                During my time at university, I was actively involved in various
-                activities and projects that helped shape my skills and
-                knowledge. Here are a few highlights:
-              </p>
-
-              <ul>
-                <li>
-                  <b>Academic Achievements:</b> I consistently maintained a high
-                  GPA and received several awards for my academic performance.
-                </li>
-                <li>
-                  <b>Extracurricular Activities:</b> I was a member of several
-                  clubs and participated in numerous events, which I found both
-                  enriching and enjoyable.
-                </li>
-              </ul>
-              <p>Here are some of the clubs and events I participated in:</p>
-              <ul>
-                <li>
-                  <b>Octa Sports Fest (OSF):</b> Organized sports events to
-                  encourage physical activity.
-                </li>
-                <li>
-                  <b>Kelas Kebudayaan Cina (KKC):</b> Taught Chinese culture.
-                </li>
-                <li>
-                  <b>Unmasked Reality - Technical Team:</b> Developed Unity AR
-                  mobile app for treasure hunt games.
-                </li>
-                <li>
-                  <b>JKP Kemas:</b> Organized health & fitness events.
-                </li>
-                <li>
-                  <b>App Club:</b> Learned Git along with code theory &
-                  concepts.
-                </li>
-                <li>
-                  <b>Developer Student Clubs:</b> Learned Android Studio &
-                  Mobile App Development.
-                </li>
-                <li>
-                  <b>Sukmum8th:</b> Participated as a cheerleader and industrial
-                  dancer.
-                </li>
-                <li>
-                  <b>Technical Team Learning:</b> Gained skills in computer,
-                  wiring and speaker setup.
-                </li>
-              </ul>
-              <p>
-                I believe there are more events and activities I participated
-                in, but I can't recall all the details. Despite the challenges,
-                such as the pandemic disrupting our plans, I enjoyed and learned
-                a lot from these experiences.
-              </p>
-              <p>
-                One memorable project involved finding third-party collaborators
-                to encourage people to reduce their mobile phone usage and
-                engage more in face-to-face interactions. We faced several
-                challenges, including an international teammate returning to
-                their country and the pandemic complicating communication. Our
-                group leader struggled with providing clear instructions, and
-                some members were late to meetings, leading to conflicts.
-                Despite these hurdles, we managed to understand each other and
-                made amends, thanks to the efforts of a dedicated teammate who
-                helped piece our broken group back together.
-              </p>
-              <h2 className="blog-post-title">
+      <div className="aboutMePageMainContainer">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 blog-main">
+              <div className="blog-post">
+                <br></br>
+                <h2 className="blog-post-title">
+                  My Curriculum Vitae and University Life Story
+                </h2>
+                <p id="GoingDown">
+                  Welcome to my blog! Here, I’d like to share some details about
+                  my curriculum vitae and a few stories from my university life.
+                  If you have any questions or would like to get in touch,
+                  please feel free to contact me via{" "}
+                  <a href="mailto:ahaoahao2000@gmail.com">E-mail</a> or direct
+                  message me on{" "}
+                  <a href="wa.link/twvut3" target="_blank">
+                    WhatsApp
+                  </a>
+                  .
+                </p>
+                <hr />
+                <h2 className="blog-post-title">About Me</h2>
+                <p>
+                  I am Wei Hao, and I'm graduated from{" "}
+                  <b>University of Malaya, Malaysia</b> with a degree in{" "}
+                  <b>
+                    Bachelor of Computer Science (Software Engineering), CGPA
+                    3.85/4.0
+                  </b>
+                  . My time at university was filled with valuable experiences,
+                  both academically and personally.
+                </p>
                 <br />
-                The 4-Cs Value
-              </h2>
-              <p>
-                Deep down, I believe that these four key values are very
-                significant to everyone's life. Understanding and utilizing
-                these values in any aspect of our life-career, self-development,
-                and relationships can make our future more meaningful and
-                colorful, with fewer misunderstandings and mental health
-                problems. These values are:
-              </p>
-              <strong>
-                <ol>
-                  <li>Creativity</li>
-                  <li>Critical thinking</li>
-                  <li> Collaboration</li>
-                  <li>Communication</li>
-                </ol>
-              </strong>
-              <p>
-                A team without spirit is just like a body in a PVS(persistent
-                vegetative state). Therefore, I strive to incorporate unity into
-                teams, helping them grow stronger.
-              </p>
-              <h2 className="blog-post-title">
-                <br />
-                Something About Me
-              </h2>
-              <p>Here are a few traits that define me:</p>
-              <b>
+
+                <h2 className="blog-post-title">
+                  University Life and Experiences
+                </h2>
+                <p>
+                  During my time at university, I was actively involved in
+                  various activities and projects that helped shape my skills
+                  and knowledge. Here are a few highlights:
+                </p>
+
                 <ul>
-                  <li>Curious</li>
-                  <li>Impatient</li>
-                  <li>Quick Learner</li>
-                  <li>Mind-Absent</li>
-                  <li>Anxious</li>
-                  <li>Far-Sighted</li>
-                  <li>Detail-Oriented</li>
                   <li>
-                    Optimistic - I believe that after a hurricane, a rainbow
-                    always follows.
+                    <b>Academic Achievements:</b> I consistently maintained a
+                    high GPA and received several awards for my academic
+                    performance.
+                  </li>
+                  <li>
+                    <b>Extracurricular Activities:</b> I was a member of several
+                    clubs and participated in numerous events, which I found
+                    both enriching and enjoyable.
                   </li>
                 </ul>
-              </b>
-              <h2 className="blog-post-title">
-                <br />
-                Looking Forward
-              </h2>
-              <p>
-                Now that I have graduated and have been working for several
-                years, I am excited to apply my skills and knowledge in a
-                professional setting. I am particularly interested in{" "}
-                <b>Full-Stack Developer</b>, and I am actively seeking
-                opportunities in this field.
-              </p>
-              <h2 className="blog-post-title">
-                <br />
-                Contact Me
-              </h2>
-              <p>
-                I would love to hear from you! If you have any questions or
-                would like to discuss potential opportunities, please feel free
-                to reach out:
-              </p>
-              <b>
+                <p>Here are some of the clubs and events I participated in:</p>
                 <ul>
-                  <li>{"Email: ahaoahao2000@gmail.com"}</li>
-                  <li>{"WhatsApp: +6017-7296988"}</li>
+                  <li>
+                    <b>Octa Sports Fest (OSF):</b> Organized sports events to
+                    encourage physical activity.
+                  </li>
+                  <li>
+                    <b>Kelas Kebudayaan Cina (KKC):</b> Taught Chinese culture.
+                  </li>
+                  <li>
+                    <b>Unmasked Reality - Technical Team:</b> Developed Unity AR
+                    mobile app for treasure hunt games.
+                  </li>
+                  <li>
+                    <b>JKP Kemas:</b> Organized health & fitness events.
+                  </li>
+                  <li>
+                    <b>App Club:</b> Learned Git along with code theory &
+                    concepts.
+                  </li>
+                  <li>
+                    <b>Developer Student Clubs:</b> Learned Android Studio &
+                    Mobile App Development.
+                  </li>
+                  <li>
+                    <b>Sukmum8th:</b> Participated as a cheerleader and
+                    industrial dancer.
+                  </li>
+                  <li>
+                    <b>Technical Team Learning:</b> Gained skills in computer,
+                    wiring and speaker setup.
+                  </li>
                 </ul>
-              </b>
-              <p>
-                Feel free to visit my personal website where you can navigate to
-                other pages. Although it currently has limited functionality, I
-                update it periodically with new languages or features.
-              </p>
-              <br />
-              <p>
-                You can also access my certifications on Google Drive:{" "}
-                <a
-                  href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Google Drive E-certifications
-                </a>
-              </p>
-              <br />
-              <br />
+                <p>
+                  I believe there are more events and activities I participated
+                  in, but I can't recall all the details. Despite the
+                  challenges, such as the pandemic disrupting our plans, I
+                  enjoyed and learned a lot from these experiences.
+                </p>
+                <p>
+                  One memorable project involved finding third-party
+                  collaborators to encourage people to reduce their mobile phone
+                  usage and engage more in face-to-face interactions. We faced
+                  several challenges, including an international teammate
+                  returning to their country and the pandemic complicating
+                  communication. Our group leader struggled with providing clear
+                  instructions, and some members were late to meetings, leading
+                  to conflicts. Despite these hurdles, we managed to understand
+                  each other and made amends, thanks to the efforts of a
+                  dedicated teammate who helped piece our broken group back
+                  together.
+                </p>
+                <h2 className="blog-post-title">
+                  <br />
+                  The 4-Cs Value
+                </h2>
+                <p>
+                  Deep down, I believe that these four key values are very
+                  significant to everyone's life. Understanding and utilizing
+                  these values in any aspect of our life-career,
+                  self-development, and relationships can make our future more
+                  meaningful and colorful, with fewer misunderstandings and
+                  mental health problems. These values are:
+                </p>
+                <strong>
+                  <ol>
+                    <li>Creativity</li>
+                    <li>Critical thinking</li>
+                    <li> Collaboration</li>
+                    <li>Communication</li>
+                  </ol>
+                </strong>
+                <p>
+                  A team without spirit is just like a body in a PVS(persistent
+                  vegetative state). Therefore, I strive to incorporate unity
+                  into teams, helping them grow stronger.
+                </p>
+                <h2 className="blog-post-title">
+                  <br />
+                  Something About Me
+                </h2>
+                <p>Here are a few traits that define me:</p>
+                <b>
+                  <ul>
+                    <li>Curious</li>
+                    <li>Impatient</li>
+                    <li>Quick Learner</li>
+                    <li>Mind-Absent</li>
+                    <li>Anxious</li>
+                    <li>Far-Sighted</li>
+                    <li>Detail-Oriented</li>
+                    <li>
+                      Optimistic - I believe that after a hurricane, a rainbow
+                      always follows.
+                    </li>
+                  </ul>
+                </b>
+                <h2 className="blog-post-title">
+                  <br />
+                  Looking Forward
+                </h2>
+                <p>
+                  Now that I have graduated and have been working for several
+                  years, I am excited to apply my skills and knowledge in a
+                  professional setting. I am particularly interested in{" "}
+                  <b>Full-Stack Developer</b>, and I am actively seeking
+                  opportunities in this field.
+                </p>
+                <h2 className="blog-post-title">
+                  <br />
+                  Contact Me
+                </h2>
+                <p>
+                  I would love to hear from you! If you have any questions or
+                  would like to discuss potential opportunities, please feel
+                  free to reach out:
+                </p>
+                <b>
+                  <ul>
+                    <li>{"Email: ahaoahao2000@gmail.com"}</li>
+                    <li>{"WhatsApp: +6017-7296988"}</li>
+                  </ul>
+                </b>
+                <p>
+                  Feel free to visit my personal website where you can navigate
+                  to other pages. Although it currently has limited
+                  functionality, I update it periodically with new languages or
+                  features.
+                </p>
+                <br />
+                <p>
+                  You can also access my certifications on Google Drive:{" "}
+                  <a
+                    href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Google Drive E-certifications
+                  </a>
+                </p>
+                <br />
+                <br />
+              </div>
             </div>
           </div>
         </div>
-      </main>
+      </div>
       <div className="aboutMeFooter">
         <p>
           Copyright &copy; 2024 Hao's Web App <br />

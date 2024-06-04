@@ -38,17 +38,17 @@ function Navs() {
         </Nav.Link>
       </Nav.Item>
       <Nav.Item
-        className={location.includes("/menu") ? "navItem activeBar" : "navItem"}
+        className={location.includes("/relax") ? "navItem activeBar" : "navItem"}
       >
         <Nav.Link
           className={
-            location.includes("/menu") ? "menuNavLinkButton" : "navLinkButton"
+            location.includes("/relax") ? "relaxNavLinkButton" : "navLinkButton"
           }
-          href={location.includes("/menu") ? "" : "/menu"}
-          eventKey="/menu"
-          active={location.includes("/menu") ? true : false}
+          href={location.includes("/relax") ? "" : "/relax"}
+          eventKey="/relax"
+          active={location.includes("/relax") ? true : false}
         >
-          Menu
+          Relax
         </Nav.Link>
       </Nav.Item>
       <Nav.Item

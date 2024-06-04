@@ -3,8 +3,8 @@
 }
 
 .aboutMePageMainContainer {
-  width: 90%; /* Responsive width */
-  margin: 0 auto; /* Center the container */
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +63,7 @@
   }
 }
 
-.leadText {
+.aboutMeLeadText {
   color: #fff;
 }
 
