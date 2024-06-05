@@ -79,6 +79,7 @@
     rgb(250, 0, 237),
     rgb(0, 183, 255)
   );
+  background-clip: text; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

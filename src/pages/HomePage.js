@@ -125,20 +125,20 @@ function HomePage() {
                 Our home is dying; our Mother Earth needs protectors like you to
                 stand up for her.
               </p>
-              <p>
+              <div>
                 <a
                   className="btn btn-success btn-ice"
                   target="-_blank"
                   href="https://www.greenamerica.org/your-green-life/10-ways-you-can-fight-climate-change"
                 >
                   Save The Days
-                  <div class="drops">
-                    <div class="drop drop1"></div>
-                    <div class="drop drop2"></div>
-                    <div class="drop drop3"></div>
+                  <div className="drops">
+                    <div className="drop drop1"></div>
+                    <div className="drop drop2"></div>
+                    <div className="drop drop3"></div>
                   </div>
                 </a>
-              </p>
+              </div>
             </div>
             <div className="col-lg-4">
               <img
@@ -300,9 +300,9 @@ function HomePage() {
             <a href="mailto:ahaoahao2000@gmail.com">ahaoahao2000@gmail.com</a>
           </p>
         </div>
-        <div class="ocean">
-          <div class="wave"></div>
-          <div class="wave wave2"></div>
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave wave2"></div>
         </div>
       </div>
     </div>
