@@ -11,6 +11,47 @@
   margin: 10px;
 }
 
+.navsRelax {
+  background-color: #f8f9fa !important;
+  padding: 0px 40px;
+  margin-bottom: 10px;
+
+  .relaxActiveBar {
+    color: #212529 !important;
+  }
+
+  .relaxNavLinkButton {
+    color: #000000 !important;
+  }
+
+  .navLinkButton {
+    color: #575757 !important;
+    align-self: center;
+  }
+
+  .navLinkButton:hover {
+    color: #000000 !important;
+    transition: color 0.5s ease;
+    transform: scale(1);
+  }
+
+  .disableNavLinkButton {
+    color: #adaeaf !important;
+    margin-bottom: -20px;
+    cursor: default;
+  }
+
+  .navDisableItem {
+    opacity: 0.8;
+    display: flex;
+  }
+
+  .disabledMessage {
+    font-size: 12px;
+    color: #adaeaf;
+  }
+}
+
 .navsAboutMe {
   background-color: #806058 !important;
   border-radius: 20px !important;

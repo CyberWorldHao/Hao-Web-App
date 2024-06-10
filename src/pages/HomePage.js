@@ -16,22 +16,20 @@ import React from "react";
 function HomePage() {
   return (
     <div className="homePageContainer">
+      <header
+        className="homePageHeader p-2"
+        style={{ display: "flex", flexDirection: "row" }}
+      >
+        <img
+          src={DolphinToTheLight}
+          className="rounded my-auto mx-2 dolphinToTheLightImg"
+          alt="pink dolphin"
+        />
+        <h1 className="my-auto pb-2 Title">
+          Welcome to Pinky Dolphin To The Light
+        </h1>
+      </header>
       <div className="container">
-        <header
-          className="homePageHeader p-2"
-          style={{ display: "flex", flexDirection: "row" }}
-        >
-          <img
-            src={DolphinToTheLight}
-            width="90"
-            height="60"
-            className="rounded my-auto mx-2"
-            alt="pink dolphin"
-          />
-          <h1 className="my-auto pb-2 Title">
-            Welcome to Pinky Dolphin To The Light
-          </h1>
-        </header>
         <Navs />
         <div className="homePageContentContainer">
           <img
@@ -40,7 +38,7 @@ function HomePage() {
             align="right"
             width="400"
             height="300"
-            style={{ borderRadius: "10px" }}
+            style={{ borderRadius: "10px" , margin: "20px"}}
           />
           <h2>Follow the Pink Dolphin to Amazon River</h2>
           <p>

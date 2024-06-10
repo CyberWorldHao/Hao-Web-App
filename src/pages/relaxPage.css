@@ -1,49 +1,65 @@
 .relaxPageContainer {
-  box-sizing: border-box;
   background-color: #fcebb6;
   color: #221811;
   font-family: Verdana, Arial, sans-serif;
-  padding: 0px 50px 10px 50px;
   min-height: 100vh;
+  max-width: 100vw;
+}
+
+.relaxImg {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.windingRoadImg {
+  margin-left: 20px;
+}
+
+.warmingHomeImg {
+  margin-right: 20px;
 }
 
 .relaxPageHeader {
   background-color: #806058;
+  padding: 10px 50px;
   height: 85px;
 }
 
-.relaxJumbotronFluid {
-  text-shadow: 0 0 7px #fef6c2;
-  border-radius: 6px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #eee;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  background-image: url(../images/futureCoffee.jpg);
-  background-position: "center";
+.relaxForm{
+  width: 500px;
+  margin: 5px 0px;
+}
 
-  .relaxPageHeader1 {
-    padding-top: 45px;
-    font-size: 3em;
-  }
+.relaxJumbotronFluid {
+  text-shadow: 0 0 7px #000;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-image: url(../images/futureCoffee.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.relaxPageHeader1 {
+  padding-top: 15px;
+  font-size: 3em;
+}
+
+.relaxJumbotronText {
+  font-size: 1.5em;
 }
 
 @media screen and (min-width: 768px) {
   .relaxJumbotronFluid {
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom: 48px;
-    padding-top: 48px;
+    padding: 15px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding-bottom: 48px;
-    padding-top: 48px;
+    padding-top: 15px;
   }
 }

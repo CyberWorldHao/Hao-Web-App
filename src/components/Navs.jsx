@@ -14,6 +14,8 @@ function Navs() {
           ? "navsAboutMe"
           : location.includes("/music")
           ? "navsMusic"
+          : location.includes("/relax")
+          ? "navsRelax"
           : "navs"
       }
       fill
@@ -38,7 +40,9 @@ function Navs() {
         </Nav.Link>
       </Nav.Item>
       <Nav.Item
-        className={location.includes("/relax") ? "navItem activeBar" : "navItem"}
+        className={
+          location.includes("/relax") ? "navItem relaxActiveBar" : "navItem"
+        }
       >
         <Nav.Link
           className={

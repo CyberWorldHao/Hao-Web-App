@@ -1,78 +1,96 @@
-import React from "react";
+import React, { useState } from "react";
 import "./relaxPage.css";
 import Navs from "../components/Navs";
 import WarmHome from "../images/warmHome.jpg";
 import WindingRoad from "../images/windingRoad.jpg";
-import FutureCoffee from "../images/futureCoffee.jpg";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 function RelaxPage() {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch("http://localhost:3000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: inputValue }),
+      });
+
+      if (response.ok) {
+        console.log("Email sent successfully");
+        setInputValue("");
+      } else {
+        console.error("Error sending email");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
   return (
     <div className="relaxPageContainer">
+      <header className="relaxPageHeader">
+        <h1>☕ Grab A Coffee And Relax 😌🍃</h1>
+      </header>
+      <Navs />
       <div className="container">
-        <header className="relaxPageHeader">
-          <h1 className="relaxPageHeader1">JavaJam Coffee House</h1>
-        </header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="index.html">
-            <img
-              src={WarmHome}
-              width="60"
-              height="60"
-              className="d-inline-block align-top rounded"
-              alt="mugs on a wall"
-            />{" "}
-            JavaJam
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <a className="nav-link active" href="index.html">
-                Home <span className="sr-only">(current)</span>
-              </a>
-              <a className="nav-link" href="menu.html">
-                Menu
-              </a>
-              <a className="nav-link" href="music.html">
-                Music
-              </a>
-              <a className="nav-link" href="jobs.html">
-                Jobs
-              </a>
-              {/* <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> */}
-            </div>
-          </div>
-        </nav>
-        <Navs />
         <div>
           <img
             src={WindingRoad}
-            // alt="winding road through the woods"
+            alt="winding road through the woods"
             align="right"
-            width="400"
-            height="300"
+            className="relaxImg windingRoadImg"
           />
-          <h2>Coffee at JavaJam</h2>
+          <br />
+          <h2>Great Coffee Place Nearby ☕︎</h2>
           <p>
-            Indulge in our locally roasted free-trade coffee and enjoy the
-            aroma, the smooth taste, the caffeine! Join our Mug Club and get a
-            10% discount on each cup of coffee you purchase — ask the barista
-            for details.
+            The coffee aroma is a delightful blend of floral and fruity notes,
+            with hints of jasmine and citrus dancing on the nose. Underlying
+            this brightness is a subtle nuttiness, evoking images of roasted
+            almonds. As the aroma unfolds, there's a warm, comforting scent of
+            caramelized sugar, reminiscent of freshly baked pastries. This
+            complexity is balanced by a gentle earthiness, grounding the aroma
+            and adding depth. Overall, it's a captivating bouquet that promises
+            a rich and flavorful coffee experience.
           </p>
-          <dl>
+          <dl className="mt-5">
+            <img
+              src={WarmHome}
+              alt="warming home"
+              align="left"
+              className="relaxImg warmingHomeImg"
+            />
             <dt>
-              <strong>Just Java</strong>
+              <strong>Tell me what's your favorite coffee spot?</strong>
             </dt>
             <dd>
+              <form onSubmit={handleSubmit}>
+                <Form.Control
+                  id="coffeeSpot"
+                  type="text"
+                  className="relaxForm"
+                  size="sm"
+                  onChange={handleChange}
+                  value={inputValue}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") {
+                      event.preventDefault();
+                      handleSubmit(event);
+                    }
+                  }}
+                />
+                <Button size="sm" type="submit" className="mt-1">
+                  Submit
+                </Button>
+              </form>
               Regular house blend, decaffeinated coffee, or flavor of the day.
             </dd>
             <dd>Endless Cup $2.00</dd>
@@ -90,19 +108,19 @@ function RelaxPage() {
             </dd>
             <dd>Single $4.75 Double $5.75</dd>
           </dl>
-          <div className="relaxJumbotronFluid">
+          <div className="relaxJumbotronFluid mt-5">
             <h1 className="relaxPageHeader1">
               All Of The Lovers Just Like Creams And Coffee
             </h1>
-            <p>
+            <p className="relaxJumbotronText">
               'Cause when their unbreakable bonds poured them together, it was
               something
             </p>
             <br />
-            <h1 className="relaxPageHeader1 ">
+            <h1 className="relaxPageHeader1">
               So, why not having cups of coffee
             </h1>
-            <p>
+            <p className="relaxJumbotronText">
               Enjoy your life and start your wonderful day with it
               <br />
               And make someone to look at you
@@ -112,11 +130,9 @@ function RelaxPage() {
           </div>
         </div>
 
-        <footer className="container text-center font-italic">
-          <p>
-            <div>Copyright &copy 2021 JavaJam Coffee House</div>
-            <a href="mailto:ahaoahao2000@gmail.com">ahaoahao2000@gmail.com</a>
-          </p>
+        <footer className="container text-center font-italic mt-5">
+          Copyright &copy; 2024 Hao's Web App <br />
+          <a href="mailto:ahaoahao2000@gmail.com">ahaoahao2000@gmail.com</a>
         </footer>
       </div>
     </div>

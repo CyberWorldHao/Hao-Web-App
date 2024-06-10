@@ -7,6 +7,11 @@
   overflow-x: hidden;
 }
 
+.dolphinToTheLightImg{
+  width: 80px;
+  height: 50px;
+}
+
 .homePageContentContainer {
   padding: 0px 50px;
 }
