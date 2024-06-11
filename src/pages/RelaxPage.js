@@ -11,23 +11,25 @@ function RelaxPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    try {
-      const response = await fetch("http://localhost:3000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message: inputValue }),
-      });
+    if (!!inputValue) {
+      try {
+        const response = await fetch("http://localhost:3001/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message: inputValue }),
+        });
 
-      if (response.ok) {
-        console.log("Email sent successfully");
-        setInputValue("");
-      } else {
-        console.error("Error sending email");
+        if (response.ok) {
+          console.log("Email sent successfully");
+          setInputValue("");
+        } else {
+          console.error("Error sending email");
+        }
+      } catch (error) {
+        console.error("Error sending email:", error);
       }
-    } catch (error) {
-      console.error("Error sending email:", error);
     }
   };
 
@@ -37,37 +39,32 @@ function RelaxPage() {
 
   return (
     <div className="relaxPageContainer">
-      <header className="relaxPageHeader">
-        <h1>☕ Grab A Coffee And Relax 😌🍃</h1>
+      <header className="relaxPageHeaderContainer">
+        <h1 className="relaxPageHeader">☕ Grab A Coffee And Relax 😌🍃</h1>
       </header>
       <Navs />
       <div className="container">
-        <div>
+        <div className="relaxPageContentContainer">
           <img
             src={WindingRoad}
             alt="winding road through the woods"
-            align="right"
-            className="relaxImg windingRoadImg"
+            className="relaxImg"
           />
-          <br />
-          <h2>Great Coffee Place Nearby ☕︎</h2>
-          <p>
-            The coffee aroma is a delightful blend of floral and fruity notes,
-            with hints of jasmine and citrus dancing on the nose. Underlying
-            this brightness is a subtle nuttiness, evoking images of roasted
-            almonds. As the aroma unfolds, there's a warm, comforting scent of
-            caramelized sugar, reminiscent of freshly baked pastries. This
-            complexity is balanced by a gentle earthiness, grounding the aroma
-            and adding depth. Overall, it's a captivating bouquet that promises
-            a rich and flavorful coffee experience.
-          </p>
-          <dl className="mt-5">
-            <img
-              src={WarmHome}
-              alt="warming home"
-              align="left"
-              className="relaxImg warmingHomeImg"
-            />
+          <div className="coffeeText">
+            <h2 className="coffeeTextHeader">Great Coffee Place Nearby ☕︎</h2>
+            <p>
+              The coffee aroma is a delightful blend of floral and fruity notes,
+              with hints of jasmine and citrus dancing on the nose. Underlying
+              this brightness is a subtle nuttiness, evoking images of roasted
+              almonds. As the aroma unfolds, there's a warm, comforting scent of
+              caramelized sugar, reminiscent of freshly baked pastries. This
+              complexity is balanced by a gentle earthiness, grounding the aroma
+              and adding depth. Overall, it's a captivating bouquet that
+              promises a rich and flavorful coffee experience.
+            </p>
+          </div>
+          <img src={WarmHome} alt="warming home" className="relaxImg2" />
+          <dl className="coffeeText2">
             <dt>
               <strong>Tell me what's your favorite coffee spot?</strong>
             </dt>
@@ -91,43 +88,51 @@ function RelaxPage() {
                   Submit
                 </Button>
               </form>
-              Regular house blend, decaffeinated coffee, or flavor of the day.
             </dd>
-            <dd>Endless Cup $2.00</dd>
             <dt>
-              <strong>Cafe au Lait</strong>
-            </dt>
-            <dd>House blended coffee infused into a smooth, steamed milk.</dd>
-            <dd>Single $2.00 Double $3.00</dd>
-            <dt>
-              <strong>Iced Cappuccino</strong>
+              <strong>Caffè Latte</strong>
             </dt>
             <dd>
-              Sweetened espresso blended with icy-cold milk and served in a
-              chilled glass.
+              Lattes are popular for their mild coffee flavor and creamy
+              texture. They can also be flavored with syrups such as vanilla,
+              caramel, or hazelnut.
             </dd>
-            <dd>Single $4.75 Double $5.75</dd>
+            <small>
+              RM8 to RM25 || <i>Local Coffee Shops to High-End Cafes</i>
+            </small>
+            <dt>
+              <br />
+              <strong>Cappuccino</strong>
+            </dt>
+            <dd>
+              Cappuccinos are popular worldwide and are particularly favored in
+              European coffee culture. In Italy, it is traditionally enjoyed in
+              the morning, often paired with a pastry.
+            </dd>
+            <small>
+              RM9 to RM25 || <i>Local Coffee Shops to High-End Cafes</i>
+            </small>
           </dl>
-          <div className="relaxJumbotronFluid mt-5">
-            <h1 className="relaxPageHeader1">
-              All Of The Lovers Just Like Creams And Coffee
-            </h1>
-            <p className="relaxJumbotronText">
-              'Cause when their unbreakable bonds poured them together, it was
-              something
-            </p>
+        </div>
+        <div className="relaxJumbotronFluid p-3">
+          <h1 className="relaxPageHeader1">
+            All Of The Lovers Just Like Creams And Coffee
+          </h1>
+          <p className="relaxJumbotronText">
+            'Cause when their unbreakable bonds poured them together, it was
+            something
+          </p>
+          <br />
+          <h1 className="relaxPageHeader1">
+            So, why not having cups of coffee
+          </h1>
+          <p className="relaxJumbotronText">
+            Enjoy your life and start your wonderful day with it
             <br />
-            <h1 className="relaxPageHeader1">
-              So, why not having cups of coffee
-            </h1>
-            <p className="relaxJumbotronText">
-              Enjoy your life and start your wonderful day with it
-              <br />
-              And make someone to look at you
-              <br />
-              The way you look at coffee ~
-            </p>
-          </div>
+            And make someone to look at you
+            <br />
+            The way you look at coffee ~
+          </p>
         </div>
 
         <footer className="container text-center font-italic mt-5">

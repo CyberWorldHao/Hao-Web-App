@@ -6,28 +6,32 @@
   max-width: 100vw;
 }
 
-.relaxImg {
-  width: 400px;
-  height: 300px;
-  border-radius: 10px;
+.relaxPageContentContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .coffeeText,
+  .coffeeText2 {
+    width: 600px;
+    align-self: center;
+  }
+
+  .relaxImg,
+  .relaxImg2 {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    align-self: center;
+  }
 }
 
-.windingRoadImg {
-  margin-left: 20px;
-}
-
-.warmingHomeImg {
-  margin-right: 20px;
-}
-
-.relaxPageHeader {
+.relaxPageHeaderContainer {
   background-color: #806058;
-  padding: 10px 50px;
-  height: 85px;
 }
 
-.relaxForm{
-  width: 500px;
+.relaxForm {
   margin: 5px 0px;
 }
 
@@ -42,24 +46,94 @@
   background-size: cover;
 }
 
-.relaxPageHeader1 {
-  padding-top: 15px;
-  font-size: 3em;
-}
+@media screen and (max-width: 768px) {
+  .relaxForm {
+    width: 300px;
+  }
 
-.relaxJumbotronText {
-  font-size: 1.5em;
-}
+  .relaxPageHeader1 {
+    padding-top: 8px;
+    font-size: 1.8em;
+  }
 
-@media screen and (min-width: 768px) {
+  .relaxJumbotronText {
+    font-size: 1.2em;
+  }
+
   .relaxJumbotronFluid {
-    padding: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .relaxPageHeaderContainer {
+    padding: 5px 15px;
+    height: 40px;
+  }
+
+  .relaxPageHeader {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .coffeeTextHeader {
+    font-size: x-large;
+  }
+
+  .relaxPageContentContainer {
+    .relaxImg,
+    .relaxImg2 {
+      margin: 10px 0px;
+    }
   }
 }
 
-@media screen and (min-width: 768px) {
-  .jumbotron {
-    padding-bottom: 48px;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .relaxForm {
+    width: 500px;
+  }
+
+  .relaxPageContentContainer {
+    .relaxImg,
+    .relaxImg2 {
+      margin: 20px 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .relaxPageHeaderContainer {
+    padding: 10px 50px;
+    height: 85px;
+  }
+
+  .relaxJumbotronFluid {
+    padding: 15px;
+  }
+
+  .relaxForm {
+    width: 500px;
+  }
+
+  .relaxPageHeader1 {
     padding-top: 15px;
+    font-size: 3em;
+  }
+
+  .relaxJumbotronText {
+    font-size: 1.5em;
+  }
+
+  .relaxJumbotronFluid {
+    margin-bottom: 30px;
+    margin-top: 48px;
+  }
+
+  .relaxPageContentContainer {
+    .relaxImg,
+    .relaxImg2,
+    .coffeeText,
+    .coffeeText2 {
+      margin-top: 48px;
+    }
   }
 }
