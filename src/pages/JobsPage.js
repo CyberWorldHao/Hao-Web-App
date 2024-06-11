@@ -3,60 +3,60 @@ import React from 'react';
 import './jobsPage.css';
 
 function JobsPage() {
-  var opt = document.querySelector('select');
-  var paragraph = document.querySelector('#jobScope');
-  //   opt.addEventListener('change', changeText);
-  const changeText = () => {
-    var value = opt.value;
-    for (var i = 0; i < jobclass.length; i++) {
-      if (value == jobclass[i].code) {
-        paragraph.textContent = jobclass[i].scope;
-      }
-    }
-  };
+//   var opt = document.querySelector('select');
+//   var paragraph = document.querySelector('#jobScope');
+//   //   opt.addEventListener('change', changeText);
+//   const changeText = () => {
+//     var value = opt.value;
+//     for (var i = 0; i < jobclass.length; i++) {
+//       if (value === jobclass[i].code) {
+//         paragraph.textContent = jobclass[i].scope;
+//       }
+//     }
+//   };
 
-  var jobclass = [
-    {
-      code: 'ba',
-      name: 'Barista',
-      scope:
-        'Preparing and serving hot and cold drinks such as coffee, tea, artisan and speciality beverages.',
-    },
-    {
-      code: 'tr',
-      name: 'Trainee',
-      scope: 'Supporting daily operations of the cafe.',
-    },
-    {
-      code: 'ct',
-      name: 'Coffee Taster',
-      scope:
-        'Tastes samples of coffee to determine palatability of different coffee in terms of grade, approximate market value, or acceptability to consumer tastes.',
-    },
-    {
-      code: 'ma',
-      name: 'Manager',
-      scope: 'Managing day-to-day operations of the cafe.',
-    },
-    {
-      code: 'csm',
-      name: 'Coffee Store Manager',
-      scope:
-        'Complete store administration and ensure compliance with policies and procedures, expand store traffic and optimize profitability.',
-    },
-    {
-      code: 'asm',
-      name: 'Assistant Store Manager',
-      scope:
-        'Maintain outstanding store condition and visual merchandising standards, additional store manager duties as needed.',
-    },
-    {
-      code: 'am',
-      name: 'Administrative Manager',
-      scope:
-        'Meet sales goals by training, motivating, mentoring and providing feedback to sales staff, propose innovative ideas to increase market share.',
-    },
-  ];
+//   var jobclass = [
+//     {
+//       code: 'ba',
+//       name: 'Barista',
+//       scope:
+//         'Preparing and serving hot and cold drinks such as coffee, tea, artisan and speciality beverages.',
+//     },
+//     {
+//       code: 'tr',
+//       name: 'Trainee',
+//       scope: 'Supporting daily operations of the cafe.',
+//     },
+//     {
+//       code: 'ct',
+//       name: 'Coffee Taster',
+//       scope:
+//         'Tastes samples of coffee to determine palatability of different coffee in terms of grade, approximate market value, or acceptability to consumer tastes.',
+//     },
+//     {
+//       code: 'ma',
+//       name: 'Manager',
+//       scope: 'Managing day-to-day operations of the cafe.',
+//     },
+//     {
+//       code: 'csm',
+//       name: 'Coffee Store Manager',
+//       scope:
+//         'Complete store administration and ensure compliance with policies and procedures, expand store traffic and optimize profitability.',
+//     },
+//     {
+//       code: 'asm',
+//       name: 'Assistant Store Manager',
+//       scope:
+//         'Maintain outstanding store condition and visual merchandising standards, additional store manager duties as needed.',
+//     },
+//     {
+//       code: 'am',
+//       name: 'Administrative Manager',
+//       scope:
+//         'Meet sales goals by training, motivating, mentoring and providing feedback to sales staff, propose innovative ideas to increase market share.',
+//     },
+//   ];
   //   for (var i = 0; i < jobclass.length; i++) {
   //     document.write(
   //       '<option value=' +
