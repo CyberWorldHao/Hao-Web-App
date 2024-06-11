@@ -1,24 +1,25 @@
-import "./homePage.css";
-import amazonRiverPinkDolphin from "../images/amazonRiverPinkDolphin.png";
-import BloodDrop from "../images/bloodDrop.png";
-import BloodSplatter from "../images/bloodSplatter.png";
-import BloodyHand from "../images/bloodyHand.png";
-import DolphinToTheLight from "../images/dolphinToTheLight.jpg";
-import Flowers from "../components/Flowers";
-import GhibliStudio from "../images/ghibliStudio.jpg";
-import L4D2 from "../images/l4D2.png";
-import Love from "../images/love.jpg";
-import LoveBubble from "../images/loveBubble.png";
-import Navs from "../components/Navs";
-import PolarBear from "../images/polarBear.jpg";
-import React from "react";
+import React from 'react';
+
+import Flowers from '../components/Flowers';
+import Navs from '../components/Navs';
+import amazonRiverPinkDolphin from '../images/amazonRiverPinkDolphin.png';
+import BloodDrop from '../images/bloodDrop.png';
+import BloodSplatter from '../images/bloodSplatter.png';
+import BloodyHand from '../images/bloodyHand.png';
+import DolphinToTheLight from '../images/dolphinToTheLight.jpg';
+import GhibliStudio from '../images/ghibliStudio.jpg';
+import L4D2 from '../images/l4D2.png';
+import Love from '../images/love.jpg';
+import LoveBubble from '../images/loveBubble.png';
+import PolarBear from '../images/polarBear.jpg';
+import './homePage.css';
 
 function HomePage() {
   return (
     <div className="homePageContainer">
       <header
         className="homePageHeader p-2"
-        style={{ display: "flex", flexDirection: "row" }}
+        style={{ display: 'flex', flexDirection: 'row' }}
       >
         <img
           src={DolphinToTheLight}
@@ -38,7 +39,7 @@ function HomePage() {
             align="right"
             width="400"
             height="300"
-            style={{ borderRadius: "10px" , margin: "20px"}}
+            style={{ borderRadius: '10px', margin: '20px' }}
           />
           <h2>Follow the Pink Dolphin to Amazon River</h2>
           <p>
@@ -74,8 +75,8 @@ function HomePage() {
               placement near the skin surface.
             </li>
             <li>
-              <b>Size:</b> Adult pink dolphins can reach lengths of up to{" "}
-              <b>2.5 meters (8.2 feet) </b>and weigh between{" "}
+              <b>Size:</b> Adult pink dolphins can reach lengths of up to{' '}
+              <b>2.5 meters (8.2 feet) </b>and weigh between{' '}
               <b>85 and 160 kilograms (187 to 353 pounds)</b>.
             </li>
             <li>
@@ -88,10 +89,10 @@ function HomePage() {
           <br />
           <p
             style={{
-              fontStyle: "italic",
-              marginLeft: "0",
-              textIndent: "-20px",
-              paddingLeft: "20px",
+              fontStyle: 'italic',
+              marginLeft: '0',
+              textIndent: '-20px',
+              paddingLeft: '20px',
             }}
           >
             Simandan, V. (2023, August 2). 25 Interesting Facts About the Pink
@@ -100,7 +101,7 @@ function HomePage() {
             <a
               href="https://www.simandan.com/amazon-river-pink-dolphin/"
               target="_blank"
-              style={{ color: "blue", textDecoration: "underline" }}
+              style={{ color: 'blue', textDecoration: 'underline' }}
               rel="noreferrer"
             >
               https://www.simandan.com/amazon-river-pink-dolphin/
@@ -119,7 +120,7 @@ function HomePage() {
               <br />
               <br />
               <h2>Stop Global Warming Fight Climate Change</h2>
-              <p style={{ textAlign: "justify" }}>
+              <p style={{ textAlign: 'justify' }}>
                 Our home is dying; our Mother Earth needs protectors like you to
                 stand up for her.
               </p>
@@ -152,14 +153,14 @@ function HomePage() {
                 STOP Saying <br />
                 "I Love You"
               </h2>
-              <p style={{ textAlign: "justify" }}>
+              <p style={{ textAlign: 'justify' }}>
                 Please respect the word 'Love' and say it only to those you
                 truly mean it to.
               </p>
               <p className="loveImg">
                 <a
                   className="btn btn-danger"
-                  style={{ backgroundcolor: "#5B1E61" }}
+                  style={{ backgroundcolor: '#5B1E61' }}
                   target="-_blank"
                   href="https://www.youtube.com/watch?v=cr-ZCI_ZaFg"
                 >
@@ -196,7 +197,7 @@ function HomePage() {
               </h2>
               <p
                 className="l4d2Img forImgDisplay"
-                style={{ textAlign: "justify" }}
+                style={{ textAlign: 'justify' }}
               >
                 If the answer is yes, let me take you to the music video by the
                 Midnight Riders Band.
@@ -211,7 +212,7 @@ function HomePage() {
               <p className="l4d2Img">
                 <a
                   className="btn btn-danger"
-                  style={{ color: "#c3253f", backgroundColor: "white" }}
+                  style={{ color: '#c3253f', backgroundColor: 'white' }}
                   target="-_blank"
                   href="https://www.youtube.com/watch?v=iyH_NxJ86vs"
                 >
@@ -241,7 +242,7 @@ function HomePage() {
             />
             <img
               src={GhibliStudio}
-              style={{ borderRadius: "25px" }}
+              style={{ borderRadius: '25px' }}
               className="bd-placeholder-img"
               width="350"
               height="380"
@@ -269,8 +270,8 @@ function HomePage() {
               flowerType="flowerBlink"
             />
             <br />
-            <h2 style={{ textAlign: "center" }}>
-              {"吉卜力工作室 Studio Ghibli"}
+            <h2 style={{ textAlign: 'center' }}>
+              {'吉卜力工作室 Studio Ghibli'}
             </h2>
             <p>
               I love Studio Ghibli, and here is one of my favorite songs from

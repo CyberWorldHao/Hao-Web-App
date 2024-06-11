@@ -1,15 +1,16 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import AboutMePage from "./pages/AboutMePage";
-import MusicPage from "./pages/MusicPage";
-import RelaxPage from "./pages/RelaxPage";
-import PhoneBook from "./components/phoneBook/PhoneBook";
-import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+import PhoneBook from './components/phoneBook/PhoneBook';
+import AboutMePage from './pages/AboutMePage';
+import HomePage from './pages/HomePage';
+import MusicPage from './pages/MusicPage';
+import RelaxPage from './pages/RelaxPage';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <HomePage />,
     // loader: true/false,
     // loader: rootLoader,
@@ -22,27 +23,27 @@ const router = createBrowserRouter([
     // ],
   },
   {
-    path: "/home",
+    path: '/home',
     element: <HomePage />,
     // loader: teamLoader,
   },
   {
-    path: "/phonebook",
+    path: '/phonebook',
     element: <PhoneBook />,
     // loader: teamLoader,
   },
   {
-    path: "/aboutme",
+    path: '/aboutme',
     element: <AboutMePage />,
     // loader: teamLoader,
   },
   {
-    path: "/music",
+    path: '/music',
     element: <MusicPage />,
     // loader: teamLoader,
   },
   {
-    path: "/relax",
+    path: '/relax',
     element: <RelaxPage />,
     // loader: teamLoader,
   },

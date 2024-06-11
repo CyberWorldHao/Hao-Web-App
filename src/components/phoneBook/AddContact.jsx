@@ -1,7 +1,8 @@
-import "./phoneBookStyle.css";
-import { phoneBookData, updateData } from "./PhoneBookData.jsx";
-import Button from "react-bootstrap/Button";
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+
+import { phoneBookData, updateData } from './PhoneBookData.jsx';
+import './phoneBookStyle.css';
 
 function AddContact(name, num) {
   let newContact = {};
@@ -12,8 +13,8 @@ function AddContact(name, num) {
 }
 
 function RenderForm() {
-  const [name, setName] = useState("");
-  const [num, setNum] = useState("");
+  const [name, setName] = useState('');
+  const [num, setNum] = useState('');
   return (
     <div className="formContainer">
       <form>

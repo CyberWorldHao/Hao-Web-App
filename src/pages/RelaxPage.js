@@ -1,34 +1,35 @@
-import React, { useState } from "react";
-import "./relaxPage.css";
-import Navs from "../components/Navs";
-import WarmHome from "../images/warmHome.jpg";
-import WindingRoad from "../images/windingRoad.jpg";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+import Navs from '../components/Navs';
+import WarmHome from '../images/warmHome.jpg';
+import WindingRoad from '../images/windingRoad.jpg';
+import './relaxPage.css';
 
 function RelaxPage() {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!!inputValue) {
       try {
-        const response = await fetch("http://localhost:3001/send-email", {
-          method: "POST",
+        const response = await fetch('http://localhost:3001/send-email', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify({ message: inputValue }),
         });
 
         if (response.ok) {
-          console.log("Email sent successfully");
-          setInputValue("");
+          console.log('Email sent successfully');
+          setInputValue('');
         } else {
-          console.error("Error sending email");
+          console.error('Error sending email');
         }
       } catch (error) {
-        console.error("Error sending email:", error);
+        console.error('Error sending email:', error);
       }
     }
   };
@@ -78,7 +79,7 @@ function RelaxPage() {
                   onChange={handleChange}
                   value={inputValue}
                   onKeyDown={(event) => {
-                    if (event.key === "Enter") {
+                    if (event.key === 'Enter') {
                       event.preventDefault();
                       handleSubmit(event);
                     }

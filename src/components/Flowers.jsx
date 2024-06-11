@@ -1,5 +1,6 @@
-import "./flowersStyle.css";
-import React from "react";
+import React from 'react';
+
+import './flowersStyle.css';
 
 function Flowers({ flowerPositionRight, flowerPositionTop, flowerType }) {
   return (

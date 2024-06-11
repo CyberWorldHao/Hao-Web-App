@@ -1,13 +1,14 @@
-import "./aboutMePage.css";
-import Navs from "../components/Navs";
-import React from "react";
+import React from 'react';
+
+import Navs from '../components/Navs';
+import './aboutMePage.css';
 
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
   this.period = parseInt(period, 10) || 2000;
-  this.txt = "";
+  this.txt = '';
   this.tick();
   this.isDeleting = false;
 };
@@ -22,7 +23,7 @@ TxtType.prototype.tick = function () {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
-  this.el.innerHTML = '<span className="wrap">' + this.txt + "</span>";
+  this.el.innerHTML = '<span className="wrap">' + this.txt + '</span>';
 
   var that = this;
   var delta = 200 - Math.random() * 100;
@@ -34,7 +35,7 @@ TxtType.prototype.tick = function () {
   if (!this.isDeleting && this.txt === fullTxt) {
     delta = this.period;
     this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === "") {
+  } else if (this.isDeleting && this.txt === '') {
     this.isDeleting = false;
     this.loopNum++;
     delta = 500;
@@ -46,18 +47,18 @@ TxtType.prototype.tick = function () {
 };
 
 window.onload = function () {
-  var elements = document.getElementsByClassName("typewrite");
+  var elements = document.getElementsByClassName('typewrite');
   for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].getAttribute("data-type");
-    var period = elements[i].getAttribute("data-period");
+    var toRotate = elements[i].getAttribute('data-type');
+    var period = elements[i].getAttribute('data-period');
     if (toRotate) {
       new TxtType(elements[i], JSON.parse(toRotate), period);
     }
   }
   // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+  var css = document.createElement('style');
+  css.type = 'text/css';
+  css.innerHTML = '.typewrite > .wrap { border-right: 0.08em solid #fff}';
   document.body.appendChild(css);
 };
 
@@ -104,9 +105,9 @@ function AboutMePage() {
             <ion-icon
               name="home"
               style={{
-                fontSize: "40px",
-                color: "#DEB887",
-                margin: "5% 0px 0px 1%",
+                fontSize: '40px',
+                color: '#DEB887',
+                margin: '5% 0px 0px 1%',
               }}
             ></ion-icon>
           </a>
@@ -119,9 +120,9 @@ function AboutMePage() {
             <ion-icon
               name="mail"
               style={{
-                fontSize: "40px",
-                color: "#DEB887",
-                margin: "5% 0px 0px 1%",
+                fontSize: '40px',
+                color: '#DEB887',
+                margin: '5% 0px 0px 1%',
               }}
             ></ion-icon>
           </a>
@@ -134,9 +135,9 @@ function AboutMePage() {
             <ion-icon
               name="logo-linkedin"
               style={{
-                fontSize: "40px",
-                color: "#DEB887",
-                margin: "5% 0px 0px 1%",
+                fontSize: '40px',
+                color: '#DEB887',
+                margin: '5% 0px 0px 1%',
               }}
             ></ion-icon>
           </a>
@@ -149,9 +150,9 @@ function AboutMePage() {
             <ion-icon
               name="logo-github"
               style={{
-                fontSize: "40px",
-                color: "#DEB887",
-                margin: "5% 0px 0px 1%",
+                fontSize: '40px',
+                color: '#DEB887',
+                margin: '5% 0px 0px 1%',
               }}
             ></ion-icon>
           </a>
@@ -161,28 +162,28 @@ function AboutMePage() {
             target="_blank"
             rel="noreferrer"
             style={{
-              margin: "1% 0px 0px 1%",
-              position: "relative" /* Make the container relative */,
+              margin: '1% 0px 0px 1%',
+              position: 'relative' /* Make the container relative */,
               display:
-                "inline-block" /* Ensure the container fits the content */,
+                'inline-block' /* Ensure the container fits the content */,
             }}
           >
             <ion-icon
               name="document-attach"
               style={{
-                fontSize: "40px",
-                color: "#DEB887",
+                fontSize: '40px',
+                color: '#DEB887',
               }}
             ></ion-icon>
             <ion-icon
               name="logo-google"
               style={{
-                fontSize: "16px",
-                color: "#111417",
+                fontSize: '16px',
+                color: '#111417',
                 position:
-                  "absolute" /* Position absolutely within the container */,
-                bottom: "26%" /* Align to bottom */,
-                right: "33%" /* Align to right */,
+                  'absolute' /* Position absolutely within the container */,
+                bottom: '26%' /* Align to bottom */,
+                right: '33%' /* Align to right */,
               }}
             ></ion-icon>
           </a>
@@ -195,9 +196,9 @@ function AboutMePage() {
             <ion-icon
               name="logo-whatsapp"
               style={{
-                fontSize: "40px",
-                color: "#DEB887",
-                margin: "5% 0px 0px 1%",
+                fontSize: '40px',
+                color: '#DEB887',
+                margin: '5% 0px 0px 1%',
               }}
             ></ion-icon>
           </a>
@@ -219,9 +220,9 @@ function AboutMePage() {
                   Welcome to my blog! Here, I’d like to share some details about
                   my curriculum vitae and a few stories from my university life.
                   If you have any questions or would like to get in touch,
-                  please feel free to contact me via{" "}
+                  please feel free to contact me via{' '}
                   <a href="mailto:ahaoahao2000@gmail.com">E-mail</a> or direct
-                  message me on{" "}
+                  message me on{' '}
                   <a href="wa.link/twvut3" target="_blank">
                     WhatsApp
                   </a>
@@ -230,8 +231,8 @@ function AboutMePage() {
                 <hr />
                 <h2 className="blog-post-title">About Me</h2>
                 <p>
-                  I am Wei Hao, and I'm graduated from{" "}
-                  <b>University of Malaya, Malaysia</b> with a degree in{" "}
+                  I am Wei Hao, and I'm graduated from{' '}
+                  <b>University of Malaya, Malaysia</b> with a degree in{' '}
                   <b>
                     Bachelor of Computer Science (Software Engineering), CGPA
                     3.85/4.0
@@ -366,7 +367,7 @@ function AboutMePage() {
                 <p>
                   Now that I have graduated and have been working for several
                   years, I am excited to apply my skills and knowledge in a
-                  professional setting. I am particularly interested in{" "}
+                  professional setting. I am particularly interested in{' '}
                   <b>Full-Stack Developer</b>, and I am actively seeking
                   opportunities in this field.
                 </p>
@@ -381,8 +382,8 @@ function AboutMePage() {
                 </p>
                 <b>
                   <ul>
-                    <li>{"Email: ahaoahao2000@gmail.com"}</li>
-                    <li>{"WhatsApp: +6017-7296988"}</li>
+                    <li>{'Email: ahaoahao2000@gmail.com'}</li>
+                    <li>{'WhatsApp: +6017-7296988'}</li>
                   </ul>
                 </b>
                 <p>
@@ -393,7 +394,7 @@ function AboutMePage() {
                 </p>
                 <br />
                 <p>
-                  You can also access my certifications on Google Drive:{" "}
+                  You can also access my certifications on Google Drive:{' '}
                   <a
                     href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing"
                     target="_blank"
@@ -413,17 +414,17 @@ function AboutMePage() {
         <p>
           Copyright &copy; 2024 Hao's Web App <br />
           <a href="mailto:ahaoahao2000@gmail.com">ahaoahao2000@gmail.com</a>
-          {" | "}
+          {' | '}
           <a href="https://www.linkedin.com/in/wei-hao-chong-32a29a211/">
             LinkedIn
           </a>
           <br />
           <a href="https://github.com/CyberWorldHao">GitHub</a>
-          {" | "}
+          {' | '}
           <a href="https://drive.google.com/drive/folders/1vcbcB2RAq-ciXygdcPnrS1142KUADFJV?usp=sharing">
             E-Cert
           </a>
-          {" | "}
+          {' | '}
           <a href="http://wa.link/nrb1fv">+6017-7296988</a>
         </p>
       </div>

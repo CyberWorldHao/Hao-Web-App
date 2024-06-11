@@ -30,7 +30,7 @@
   text-align: justify;
 }
 
-.soundTrackGroup{
+.soundTrackGroup {
   display: flex;
   flex-direction: column;
 }
@@ -166,7 +166,7 @@
     flex-wrap: wrap;
   }
 
-  .soundTrackGroup{
+  .soundTrackGroup {
     text-align: justify;
   }
 }

@@ -1,15 +1,16 @@
-import "./musicPage.css";
-import ALovelyNight from "../images/aLovelyNight.jpg";
-import Card from "react-bootstrap/Card";
-import CityOfStars from "../images/cityOfStars.png";
-import Earth from "../images/earth.jpg";
-import Epilogue from "../images/epilogue.jpg";
-import lilDickyEarth from "../images/lilDickyEarth.png";
-import Navs from "../components/Navs";
-import Planetarium from "../images/planetarium.jpg";
-import RaidersPoster from "../images/RaidersPoster.jpg";
-import React from "react";
-import Riders from "../images/Riders.png";
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+
+import Navs from '../components/Navs';
+import RaidersPoster from '../images/RaidersPoster.jpg';
+import Riders from '../images/Riders.png';
+import ALovelyNight from '../images/aLovelyNight.jpg';
+import CityOfStars from '../images/cityOfStars.png';
+import Earth from '../images/earth.jpg';
+import Epilogue from '../images/epilogue.jpg';
+import lilDickyEarth from '../images/lilDickyEarth.png';
+import Planetarium from '../images/planetarium.jpg';
+import './musicPage.css';
 
 function MusicPage() {
   return (
@@ -46,7 +47,7 @@ function MusicPage() {
                 <h4 className="musicPageHeader4">City of Stars</h4>
                 <div className="soundTrackImg">
                   <a
-                    href={"https://www.youtube.com/watch?v=GTWqwSNQCcg"}
+                    href={'https://www.youtube.com/watch?v=GTWqwSNQCcg'}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -74,7 +75,7 @@ function MusicPage() {
                 <h4 className="musicPageHeader4">A Lovely Night</h4>
                 <div className="soundTrackImg">
                   <a
-                    href={"https://www.youtube.com/watch?v=_8w9rOpV3gc"}
+                    href={'https://www.youtube.com/watch?v=_8w9rOpV3gc'}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -97,7 +98,7 @@ function MusicPage() {
                 <h4 className="musicPageHeader4">Planetarium</h4>
                 <div className="soundTrackImg">
                   <a
-                    href={"https://www.youtube.com/watch?v=lNFbbWOM5FU"}
+                    href={'https://www.youtube.com/watch?v=lNFbbWOM5FU'}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -121,7 +122,7 @@ function MusicPage() {
                 <h4 className="musicPageHeader4">Epilogue</h4>
                 <div className="soundTrackImg">
                   <a
-                    href={"https://www.youtube.com/watch?v=Lw0U5rhrhaI"}
+                    href={'https://www.youtube.com/watch?v=Lw0U5rhrhaI'}
                     target="_blank"
                     rel="noreferrer"
                   >

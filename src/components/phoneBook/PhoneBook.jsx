@@ -1,11 +1,12 @@
-import "./phoneBookStyle.css";
-import { phoneBookData } from "./PhoneBookData.jsx";
-import Carousel from "react-bootstrap/Carousel";
-import EmptyFolder from "../../images/emptyFolder.png";
-import Navs from "../Navs.jsx";
-import React from "react";
-import RenderForm from "./AddContact.jsx";
-import Table from "react-bootstrap/Table";
+import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import Table from 'react-bootstrap/Table';
+
+import EmptyFolder from '../../images/emptyFolder.png';
+import Navs from '../Navs.jsx';
+import RenderForm from './AddContact.jsx';
+import { phoneBookData } from './PhoneBookData.jsx';
+import './phoneBookStyle.css';
 
 function PhoneNumList() {
   if (phoneBookData.length === 0) {
@@ -61,7 +62,7 @@ function PhoneBook() {
                   className="emptyPhoneListImg"
                 />
                 <p className="credit phoneBookp">
-                  {"Designed by "}
+                  {'Designed by '}
                   <a
                     href="http://www.freepik.com"
                     target="_blank"
@@ -78,14 +79,14 @@ function PhoneBook() {
             </Carousel.Item>
           )}
           <Carousel.Item>
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
               <h2 className="phoneBookHeader2 pl-5">Add New Contact</h2>
               <ion-icon
                 name="call-outline"
                 style={{
-                  fontSize: "40px",
-                  color: "rgb(33, 37, 41)",
-                  margin: "5% 0px 0px 1%",
+                  fontSize: '40px',
+                  color: 'rgb(33, 37, 41)',
+                  margin: '5% 0px 0px 1%',
                 }}
               />
             </div>
