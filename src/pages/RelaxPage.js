@@ -1,35 +1,38 @@
-import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import Navs from '../components/Navs';
+import ToastMessage from '../components/ToastMessage';
 import WarmHome from '../images/warmHome.jpg';
 import WindingRoad from '../images/windingRoad.jpg';
 import './relaxPage.css';
 
 function RelaxPage() {
   const [inputValue, setInputValue] = useState('');
+  const [showToast, setShowToast] = useState(false);
+  const form = useRef();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!!inputValue) {
-      try {
-        const response = await fetch('http://localhost:3001/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
+      emailjs
+        .sendForm('service_2q9wgom', 'template_c13hs5c', form.current, {
+          publicKey: '4B-RHw5blJuk2IDgZ',
+        })
+        .then(
+          () => {
+            setInputValue('');
+            setShowToast(true);
+            setTimeout(() => {
+              setShowToast(false);
+            }, 3000);
           },
-          body: JSON.stringify({ message: inputValue }),
-        });
-
-        if (response.ok) {
-          console.log('Email sent successfully');
-          setInputValue('');
-        } else {
-          console.error('Error sending email');
-        }
-      } catch (error) {
-        console.error('Error sending email:', error);
-      }
+          (error) => {
+            console.error('FAILED...', error);
+          },
+        );
     }
   };
 
@@ -43,6 +46,7 @@ function RelaxPage() {
         <h1 className="relaxPageHeader">☕ Grab A Coffee And Relax 😌🍃</h1>
       </header>
       <Navs />
+      <ToastMessage message={'Thank You for sharing'} show={showToast} />
       <div className="container">
         <div className="relaxPageContentContainer">
           <img
@@ -63,18 +67,20 @@ function RelaxPage() {
               promises a rich and flavorful coffee experience.
             </p>
           </div>
+
           <img src={WarmHome} alt="warming home" className="relaxImg2" />
           <dl className="coffeeText2">
             <dt>
               <strong>Tell me what's your favorite coffee spot?</strong>
             </dt>
             <dd>
-              <form onSubmit={handleSubmit}>
+              <form ref={form} onSubmit={handleSubmit}>
                 <Form.Control
                   id="coffeeSpot"
                   type="text"
                   className="relaxForm"
                   size="sm"
+                  name="message"
                   onChange={handleChange}
                   value={inputValue}
                   onKeyDown={(event) => {
