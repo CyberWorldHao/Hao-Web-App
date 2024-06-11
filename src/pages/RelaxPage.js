@@ -9,7 +9,6 @@ import './relaxPage.css';
 
 function RelaxPage() {
   const [inputValue, setInputValue] = useState('');
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!!inputValue) {
