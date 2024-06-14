@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Card from 'react-bootstrap/Card';
 
+import CityOfStarsMP3 from '../audio/city-of-stars.mp3';
 import Navs from '../components/Navs';
 import RaidersPoster from '../images/RaidersPoster.jpg';
 import Riders from '../images/Riders.png';
@@ -13,8 +14,20 @@ import Planetarium from '../images/planetarium.jpg';
 import './musicPage.css';
 
 function MusicPage() {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.1; // Set volume to 10%
+    }
+  }, []);
+
   return (
     <div className="musicPageContainer">
+      <audio autoPlay loop id="background-audio">
+        <source src={CityOfStarsMP3} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
       <div className="musicPageContentContainer">
         <div className="container">
           <div className="starsTop" />

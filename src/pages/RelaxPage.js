@@ -30,7 +30,7 @@ function RelaxPage() {
             }, 3000);
           },
           (error) => {
-            console.error('FAILED...', error);
+            // console.log('FAILED...', error);
           },
         );
     }

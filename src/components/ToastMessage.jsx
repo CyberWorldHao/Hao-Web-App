@@ -2,7 +2,7 @@ import React from 'react';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 
-function ToastMessage({ message, show }) {
+function ToastMessage({ message, show, color }) {
   return (
     <ToastContainer
       className="p-3"
@@ -15,7 +15,7 @@ function ToastMessage({ message, show }) {
           maxWidth: '200px',
           color: 'white',
         }}
-        bg={'warning'}
+        bg={color ? 'success' : 'warning'}
         show={show}
         animation={true}
       >

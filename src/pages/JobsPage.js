@@ -1,161 +1,341 @@
-import React from 'react';
+import emailjs from '@emailjs/browser';
+import React, { useEffect, useRef, useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Row from 'react-bootstrap/Row';
 
+import HumanAlrightMP3 from '../audio/human-alright.mp3';
+import HumanYesMeLordMP3 from '../audio/human-yes-me-lord.mp3';
+import OrcWorkCompleteMP3 from '../audio/orc-work-complete.mp3';
+import OrcWorkWorkMP3 from '../audio/orc-work-work.mp3';
+import Navs from '../components/Navs';
+import ToastMessage from '../components/ToastMessage';
 import './jobsPage.css';
 
 function JobsPage() {
-//   var opt = document.querySelector('select');
-//   var paragraph = document.querySelector('#jobScope');
-//   //   opt.addEventListener('change', changeText);
-//   const changeText = () => {
-//     var value = opt.value;
-//     for (var i = 0; i < jobclass.length; i++) {
-//       if (value === jobclass[i].code) {
-//         paragraph.textContent = jobclass[i].scope;
-//       }
-//     }
-//   };
+  const audioRef = useRef(null);
+  const [randomNumber] = useState(
+    Math.floor(Math.random() * 4),
+  );
+  const [validated, setValidated] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [selectedJob, setSelectedJob] = useState('');
+  const [interview, setInterview] = useState('');
+  const [pitch, setPitch] = useState('');
+  const [check, setCheck] = useState(false);
+  const form = useRef();
 
-//   var jobclass = [
-//     {
-//       code: 'ba',
-//       name: 'Barista',
-//       scope:
-//         'Preparing and serving hot and cold drinks such as coffee, tea, artisan and speciality beverages.',
-//     },
-//     {
-//       code: 'tr',
-//       name: 'Trainee',
-//       scope: 'Supporting daily operations of the cafe.',
-//     },
-//     {
-//       code: 'ct',
-//       name: 'Coffee Taster',
-//       scope:
-//         'Tastes samples of coffee to determine palatability of different coffee in terms of grade, approximate market value, or acceptability to consumer tastes.',
-//     },
-//     {
-//       code: 'ma',
-//       name: 'Manager',
-//       scope: 'Managing day-to-day operations of the cafe.',
-//     },
-//     {
-//       code: 'csm',
-//       name: 'Coffee Store Manager',
-//       scope:
-//         'Complete store administration and ensure compliance with policies and procedures, expand store traffic and optimize profitability.',
-//     },
-//     {
-//       code: 'asm',
-//       name: 'Assistant Store Manager',
-//       scope:
-//         'Maintain outstanding store condition and visual merchandising standards, additional store manager duties as needed.',
-//     },
-//     {
-//       code: 'am',
-//       name: 'Administrative Manager',
-//       scope:
-//         'Meet sales goals by training, motivating, mentoring and providing feedback to sales staff, propose innovative ideas to increase market share.',
-//     },
-//   ];
-  //   for (var i = 0; i < jobclass.length; i++) {
-  //     document.write(
-  //       '<option value=' +
-  //         jobclass[i].code +
-  //         '>' +
-  //         jobclass[i].name +
-  //         '</option>',
-  //     );
-  //   }
+  const handleJobSelect = (event) => {
+    setSelectedJob(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setValidated(true);
+    if (
+      !!selectedJob &&
+      !!name &&
+      !!email &&
+      !!address &&
+      !!interview &&
+      !!check
+    ) {
+      emailjs
+        .sendForm('service_2q9wgom', 'template_14gy5og', form.current, {
+          publicKey: '4B-RHw5blJuk2IDgZ',
+        })
+        .then(
+          () => {
+            setValidated(false);
+            setShowToast(true);
+            setName('');
+            setEmail('');
+            setAddress('');
+            setSelectedJob('');
+            setInterview('');
+            setPitch('');
+            setCheck(false);
+            setTimeout(() => {
+              setShowToast(false);
+            }, 3000);
+          },
+          (error) => {
+            // console.log('FAILED...', error);
+          },
+        );
+    }
+  };
+
+  const playAudio = () => {
+    if (audioRef.current && !!randomNumber) {
+      audioRef.current.volume = 1; // Set volume to 100%
+      audioRef.current
+        .play()
+        .then(() => {})
+        .catch((error) => {
+          // console.log('Audio play was prevented:', error);
+        });
+    }
+  };
+
+  useEffect(() => {
+    playAudio();
+  }, [randomNumber]);
+
+  useEffect(() => {
+    const handleUserInteractionAfterLoad = () => {
+      playAudio();
+      // Remove the event listener after the first interaction
+      document.removeEventListener('click', handleUserInteractionAfterLoad);
+      document.removeEventListener('keydown', handleUserInteractionAfterLoad);
+    };
+
+    // Add event listeners for user interaction
+    document.addEventListener('click', handleUserInteractionAfterLoad);
+    document.addEventListener('keydown', handleUserInteractionAfterLoad);
+  }, [randomNumber]);
+
+  // const jobList = [];
+
+  const jobList = [
+    {
+      position: 'Barista',
+      scope:
+        'Preparing and serving hot and cold drinks such as coffee, tea, artisan and speciality beverages.',
+    },
+    {
+      position: 'Trainee',
+      scope: 'Supporting daily operations of the cafe.',
+    },
+    {
+      position: 'Coffee Taster',
+      scope:
+        'Tastes samples of coffee to determine palatability of different coffee in terms of grade, approximate market value, or acceptability to consumer tastes.',
+    },
+    {
+      position: 'Manager',
+      scope: 'Managing day-to-day operations of the cafe.',
+    },
+    {
+      position: 'Coffee Store Manager',
+      scope:
+        'Complete store administration and ensure compliance with policies and procedures, expand store traffic and optimize profitability.',
+    },
+    {
+      position: 'Assistant Store Manager',
+      scope:
+        'Maintain outstanding store condition and visual merchandising standards, additional store manager duties as needed.',
+    },
+    {
+      position: 'Administrative Manager',
+      scope:
+        'Meet sales goals by training, motivating, mentoring and providing feedback to sales staff, propose innovative ideas to increase market share.',
+    },
+  ];
 
   return (
-    <div>
-      <title>JavaJam House Jobs</title>
+    <div className="jobsPageContainer">
+      {randomNumber === 0 ? (
+        <audio autoPlay ref={audioRef}>
+          <source src={HumanAlrightMP3} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      ) : randomNumber === 1 ? (
+        <audio autoPlay ref={audioRef}>
+          <source src={HumanYesMeLordMP3} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      ) : randomNumber === 2 ? (
+        <audio autoPlay ref={audioRef}>
+          <source src={OrcWorkWorkMP3} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      ) : (
+        <audio autoPlay ref={audioRef}>
+          <source src={OrcWorkCompleteMP3} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      )}
       <div className="container">
-        <header className="header">
-          <h1>JavaJam Coffee House</h1>
+        <header className="jobsPageHeader">
+          <h1>
+            {randomNumber === 0
+              ? 'Peasant: Alright'
+              : randomNumber === 1
+                ? 'Peasant: Yes, me lord'
+                : randomNumber === 2
+                  ? 'Peon: Work, Work'
+                  : 'Peon: Work Complete'}
+          </h1>
         </header>
+        <Navs />
+        <ToastMessage
+          message={'Your application is sent'}
+          show={showToast}
+          color={true}
+        />
         <main>
-          <h2>Jobs at JavaJam</h2>
+          <h2 className="jobsPageHeader2">Join Us</h2>
           <p>
-            Want to work at JavaJam? Fill out the form below to start your
+            Want to work with me? Fill out the form below to start your
             application. Required fields are marked with an asterisk (*).
           </p>
-          <form
-            action="http://webdevbasics.net/scripts/javajam8.php"
-            method="post"
+          <Form
+            noValidate
+            validated={validated}
+            onSubmit={handleSubmit}
+            ref={form}
           >
-            <label htmlFor="name">*Full name:</label>
-            <br />
-            <div className="form-row">
-              <div className="col">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="First name / Forename / Given Name "
+            <Row className="mb-3">
+              <Form.Group as={Col} md="6" controlId="validationCustom01">
+                <Form.Label>Name*</Form.Label>
+                <Form.Control
                   required
-                />
-              </div>
-              <div className="col">
-                <input
                   type="text"
-                  className="form-control"
-                  placeholder="Last name / Surname"
-                  required
+                  name="name"
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
                 />
-              </div>
-            </div>
-
-            <label htmlFor="email">*Email address:</label>
+                <Form.Control.Feedback type="valid">
+                  Looks good!
+                </Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">
+                  Please provide your name.
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group as={Col} md="6" controlId="validationCustom02">
+                <Form.Label>E-mail*</Form.Label>
+                <Form.Control
+                  required
+                  type="email"
+                  placeholder="name@example.com"
+                  name="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                />
+                <Form.Control.Feedback type="valid">
+                  Looks good!
+                </Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">
+                  Please provide a valid email.
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Row>
+            <Row className="mb-3">
+              <Form.Group as={Col} md="12" controlId="validationCustom03">
+                <Form.Label>Address*</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="address"
+                  onChange={(e) => setAddress(e.target.value)}
+                  value={address}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please provide a valid address.
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Row>
+            <Row>
+              <Form.Group as={Col} md="6" controlId="validationCustom04">
+                <Form.Label>Select job position*</Form.Label>
+                <Form.Select
+                  required
+                  value={selectedJob}
+                  onChange={handleJobSelect}
+                >
+                  <option value=""></option>
+                  {jobList.length !== 0 ? (
+                    jobList.map((job, index) => (
+                      <option key={index} value={job.position}>
+                        {job.position}
+                      </option>
+                    ))
+                  ) : (
+                    <option value="">No job position available</option>
+                  )}
+                </Form.Select>
+                <Form.Control.Feedback type="invalid">
+                  Please select the job position that you want to apply.
+                </Form.Control.Feedback>
+                {selectedJob !== '' && (
+                  <div>
+                    <br />
+                    <p>
+                      {`Job Scope: ` +
+                        jobList.find((job) => job.position === selectedJob)
+                          ?.scope}
+                    </p>
+                  </div>
+                )}
+              </Form.Group>
+              <Form.Group as={Col} md="6" controlId="validationCustom05">
+                <Form.Label>Preferred Interview DateTime:*</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Monday to Friday || 11am to 3pm"
+                  name="interview"
+                  onChange={(e) => setInterview(e.target.value)}
+                  value={interview}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please provide an interview date and time.
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Row>
             <br />
-            <input
-              type="email"
-              className="form-control"
-              name="email"
-              id="email"
-              placeholder="name@example.com"
-              required
-            />
+            <Row>
+              <Form.Group as={Col} md="12" controlId="validationCustom06">
+                <InputGroup>
+                  <InputGroup.Text>Make Your Pitch!</InputGroup.Text>
+                  <Form.Control
+                    as="textarea"
+                    aria-label="With textarea"
+                    name="pitch"
+                    onChange={(e) => setPitch(e.target.value)}
+                    value={pitch}
+                  />
+                </InputGroup>
+              </Form.Group>
+            </Row>
             <br />
-
-            <label htmlFor="exp">*Experience:</label>
-            <br />
-            <textarea
-              name="exp"
-              className="form-control"
-              id="exp"
-              rows="3"
-              placeholder="Please list out your work experiences."
-            ></textarea>
-            <br />
-
-            <div className="form-group">
-              <label htmlFor="select-choice">Select job position:</label>
-              <select className="form-control" name="job" id="job"></select>
-              <p id="jobScope">
-                {' '}
-                Preparing and serving hot and cold drinks such as coffee, tea,
-                artisan and speciality beverages.
-              </p>
-            </div>
-
-            <label htmlFor="date&time">Preferred Interview Data and Time:</label>
-            <input type="datetime-local" id="date&time" name="date&time" />
-
-            <div className="custom-file mb-3">
-              <input
-                type="file"
-                className="custom-file-input"
-                id="validatedCustomFile"
+            <Row>
+              <Form.Group className="mb-3">
+                <Form.Label>weihao.niuace@gmail.com</Form.Label>
+                <Form.Check
+                  type={'checkbox'}
+                  id={`default-checkbox`}
+                  label={`Please provide your CV by emailing it to this address.*`}
+                  required
+                  onChange={() => setCheck(!check)}
+                  checked={check}
+                />
+              </Form.Group>
+            </Row>
+            {/* <Form.Group className="mb-3">
+              <Form.Check
                 required
+                label="Agree to terms and conditions"
+                feedback="You must agree before submitting."
+                feedbackType="invalid"
               />
-              <label className="custom-file-label" htmlFor="file">
-                Please upload your photo.{' '}
-              </label>
-            </div>
-            <button className="btn btn-light" type="submit">
-              Apply
-            </button>
-          </form>
+            </Form.Group> */}
+            <Button type="submit">Submit form</Button>
+          </Form>
+
+          {/* <button className="btn btn-light" type="submit">
+            Download Resume.pdf
+          </button>
+          <button className="btn btn-light" type="submit">
+            Download Unscannable Resume.pdf
+          </button> */}
         </main>
         <footer className="container text-center font-italic mt-5">
           Copyright &copy; 2024 Hao's Web App <br />

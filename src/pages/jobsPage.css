@@ -1,9 +1,6 @@
-/* * {
-  box-sizing: border-box;
-
-  background: linear-gradient(
-    to top,
-    #005bac,
+.jobsPageContainer {
+  background: radial-gradient(
+    farthest-corner circle at 100% top,
     #0067cc,
     #0078d7,
     #008ae6,
@@ -12,19 +9,48 @@
     #00cffa,
     #00e0a6
   );
-
   color: #221811;
-  font-family: Verdana, Arial, sans-serif;
-  background-image: url(images/background.gif);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
-.header {
-  background-color: #806058;
-  height: 85px;
+.jobsPageHeader2 {
+  padding-top: 5px;
 }
 
-.h1 {
-  padding-top: 45px;
-  padding-left: 220px;
-  font-size: 3em;
-} */
+@media screen and (max-width: 768px) {
+  .jobsPageContainer {
+    padding: 10px 10px 0px 10px;
+  }
+
+  .jobsPageHeader {
+    margin: 0px 10px;
+    height: 35px;
+    min-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .jobsPageContainer {
+    padding: 25px 100px 0px 100px;
+  }
+
+  .jobsPageHeader {
+    margin: 0px 20px;
+    height: 55px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .jobsPageContainer {
+    padding: 30px 120px 0px 120px;
+  }
+
+  .jobsPageHeader {
+    margin: 0px 20px;
+    height: 65px;
+  }
+}
