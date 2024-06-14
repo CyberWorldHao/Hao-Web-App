@@ -16,9 +16,7 @@ import './jobsPage.css';
 
 function JobsPage() {
   const audioRef = useRef(null);
-  const [randomNumber] = useState(
-    Math.floor(Math.random() * 4),
-  );
+  const [randomNumber] = useState(Math.floor(Math.random() * 4));
   const [validated, setValidated] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [name, setName] = useState('');
@@ -72,7 +70,7 @@ function JobsPage() {
     }
   };
 
-  const playAudio = () => {
+  useEffect(() => {
     if (audioRef.current && !!randomNumber) {
       audioRef.current.volume = 1; // Set volume to 100%
       audioRef.current
@@ -82,15 +80,19 @@ function JobsPage() {
           // console.log('Audio play was prevented:', error);
         });
     }
-  };
-
-  useEffect(() => {
-    playAudio();
   }, [randomNumber]);
 
   useEffect(() => {
     const handleUserInteractionAfterLoad = () => {
-      playAudio();
+      if (audioRef.current && !!randomNumber) {
+        audioRef.current.volume = 1; // Set volume to 100%
+        audioRef.current
+          .play()
+          .then(() => {})
+          .catch((error) => {
+            // console.log('Audio play was prevented:', error);
+          });
+      }
       // Remove the event listener after the first interaction
       document.removeEventListener('click', handleUserInteractionAfterLoad);
       document.removeEventListener('keydown', handleUserInteractionAfterLoad);
@@ -101,43 +103,43 @@ function JobsPage() {
     document.addEventListener('keydown', handleUserInteractionAfterLoad);
   }, [randomNumber]);
 
-  // const jobList = [];
+  const jobList = [];
 
-  const jobList = [
-    {
-      position: 'Barista',
-      scope:
-        'Preparing and serving hot and cold drinks such as coffee, tea, artisan and speciality beverages.',
-    },
-    {
-      position: 'Trainee',
-      scope: 'Supporting daily operations of the cafe.',
-    },
-    {
-      position: 'Coffee Taster',
-      scope:
-        'Tastes samples of coffee to determine palatability of different coffee in terms of grade, approximate market value, or acceptability to consumer tastes.',
-    },
-    {
-      position: 'Manager',
-      scope: 'Managing day-to-day operations of the cafe.',
-    },
-    {
-      position: 'Coffee Store Manager',
-      scope:
-        'Complete store administration and ensure compliance with policies and procedures, expand store traffic and optimize profitability.',
-    },
-    {
-      position: 'Assistant Store Manager',
-      scope:
-        'Maintain outstanding store condition and visual merchandising standards, additional store manager duties as needed.',
-    },
-    {
-      position: 'Administrative Manager',
-      scope:
-        'Meet sales goals by training, motivating, mentoring and providing feedback to sales staff, propose innovative ideas to increase market share.',
-    },
-  ];
+  // const jobList = [
+  //   {
+  //     position: 'Barista',
+  //     scope:
+  //       'Preparing and serving hot and cold drinks such as coffee, tea, artisan and speciality beverages.',
+  //   },
+  //   {
+  //     position: 'Trainee',
+  //     scope: 'Supporting daily operations of the cafe.',
+  //   },
+  //   {
+  //     position: 'Coffee Taster',
+  //     scope:
+  //       'Tastes samples of coffee to determine palatability of different coffee in terms of grade, approximate market value, or acceptability to consumer tastes.',
+  //   },
+  //   {
+  //     position: 'Manager',
+  //     scope: 'Managing day-to-day operations of the cafe.',
+  //   },
+  //   {
+  //     position: 'Coffee Store Manager',
+  //     scope:
+  //       'Complete store administration and ensure compliance with policies and procedures, expand store traffic and optimize profitability.',
+  //   },
+  //   {
+  //     position: 'Assistant Store Manager',
+  //     scope:
+  //       'Maintain outstanding store condition and visual merchandising standards, additional store manager duties as needed.',
+  //   },
+  //   {
+  //     position: 'Administrative Manager',
+  //     scope:
+  //       'Meet sales goals by training, motivating, mentoring and providing feedback to sales staff, propose innovative ideas to increase market share.',
+  //   },
+  // ];
 
   return (
     <div className="jobsPageContainer">
